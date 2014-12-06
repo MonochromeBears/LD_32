@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="4" version="1.0" version_name="Godot Engine v1.0.rc1.8ad12525a9">
 	<ext_resource path="res://hero.png" type="Texture"></ext_resource>
+	<ext_resource path="res://hero.gd" type="Script"></ext_resource>
 	<resource type="RectangleShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2 name="extents"> 10, 10 </vector2>
-
-	</resource>
-	<resource type="GDScript" path="local://2">
-		<string name="script/source"> "&#10;extends KinematicBody2D&#10;&#10;# member variables here, example:&#10;# var a=2&#10;# var b=&quot;textvar&quot;&#10;&#10;func _ready():&#10;&#9;set_fixed_process(true)&#10;&#9;pass&#10;&#10;func _fixed_process(delta):&#10;&#9;&#10;&#9;# Get the controls&#10;&#9;var move_left = Input.is_action_pressed(&quot;ui_left&quot;)&#10;&#9;var move_right = Input.is_action_pressed(&quot;ui_right&quot;)&#10;&#9;&#10;&#9;var move_up = Input.is_action_pressed(&quot;ui_up&quot;)&#10;&#9;var move_down = Input.is_action_pressed(&quot;ui_down&quot;)&#10;&#9;&#10;&#9;var dx = (move_left * -1) + (move_right * 1)&#10;&#9;var dy = (move_up * -1) + (move_down * 1)&#10;&#9;move(Vector2(dx,dy))&#10;&#9;&#10;&#9;&#10;&#10;" </string>
 
 	</resource>
 	<main_resource>
@@ -71,18 +68,18 @@
 				<resource  resource_type="Shape2D" path="local://1">  </resource>
 				<matrix32> 0.618168, -0, 0, 1.15722, 0.583974, 4.08785 </matrix32>
 				<real> 0.08 </real>
-				<resource  resource_type="Script" path="local://2">  </resource>
+				<resource  resource_type="Script" path="res://hero.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
 							<array  len="2" shared="false">
 								<string> "res://scripts/hero.gd" </string>
-								<node_path> "/root/EditorNode/@Panel3/@VBoxContainer6/@HSplitContainer8/@VSplitContainer9/@VSplitContainer10/@VBoxContainer11/@Panel16/@Control18/@CanvasItemEditor5848/@Control5804/@Control5805/@Viewport5806/Node2D" </node_path>
+								<string> "res://hero.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -199,7 +196,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<resource  resource_type="Texture" path="res://hero.png">  </resource>
 				<int> 0 </int>
