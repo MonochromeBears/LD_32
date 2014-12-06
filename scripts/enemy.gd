@@ -4,6 +4,8 @@ var hero
 var speed
 
 var health = 100
+var cooldown = 1
+var currentCooldown = 1
 
 func setHealth(hp):
 	health = hp
@@ -30,6 +32,9 @@ func _fixed_process(delta):
 
 	var moveVect = (heroPoint - point).normalized()
 	var angle = point.angle_to_point(heroPoint)
+	
+	if currentCooldown < cooldown:
+		currentCooldown += delta
 	set_rot(angle)
 
 	var motion = speed * moveVect
@@ -41,6 +46,11 @@ func _fixed_process(delta):
         	var n = get_collision_normal()
         	motion = n.slide(motion) 
         	move(motion)
+	else:
+		if currentCooldown >= cooldown:
+			hero.damage(1)
+			currentCooldown -= cooldown
+			
 
 	pass
 

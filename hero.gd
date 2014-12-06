@@ -2,6 +2,19 @@ extends KinematicBody2D
 
 var speed = 3.0
 var lastStep = Vector2(0, 0)
+
+var health = 100
+
+func damage(dmg):
+	setHealth(health - dmg)
+	pass
+	
+func setHealth(hp):
+	health = hp
+	print(health)
+	if hp <= 0:
+		destroy()
+		
 func _ready():
 	set_fixed_process(true)
 	pass
@@ -40,3 +53,7 @@ func _fixed_process(delta):
 	move(lastStep)
 
 	rotate()
+
+func destroy():
+	pass
+	

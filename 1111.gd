@@ -3,7 +3,7 @@ extends Node2D
 
 var bullet = preload("res://bullet.xml")
 
-var spread = 30
+var spread = 20
 
 func _input(ev):
 
