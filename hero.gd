@@ -1,4 +1,6 @@
 extends KinematicBody2D
+var speed = 3.0
+
 func _ready():
 	set_fixed_process(true)
 	pass
@@ -18,7 +20,7 @@ func _fixed_process(delta):
 	var dx = (move_left * -1) + (move_right * 1)
 	var dy = (move_up * -1) + (move_down * 1)
 
-	move(4.0 * Vector2(dx,dy))
+	move(speed * Vector2(dx, dy))
 	var pos1 = get_node("Position2D").get_pos()
 	var pos2 = get_pos()
 	pos2.x += pos1.x

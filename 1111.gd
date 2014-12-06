@@ -16,7 +16,6 @@ func _input(ev):
 
 		var element = get_parent().get_name()
 		var vector = ev.pos-get_parent().get_pos()
-		print(vector.normalized())
 		
 		bi.set_linear_velocity(vector.normalized()*100)
 		
