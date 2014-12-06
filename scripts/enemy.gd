@@ -6,12 +6,13 @@ var speed
 var health = 100
 var cooldown = 1
 var currentCooldown = 1
+var scores = 5
 
 func setHealth(hp):
 	health = hp
 	
 	if (health <= 0):
-		destroy()
+		get_parent().killEnemy(self)
 
 func damage(damage):
 	setHealth(health - damage)
@@ -53,6 +54,6 @@ func _fixed_process(delta):
 			
 
 	pass
-
-func destroy():
-	self.get_parent().remove_and_delete_child(self)
+	
+func getScores():
+	return scores
