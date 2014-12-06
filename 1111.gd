@@ -13,14 +13,15 @@ func _input(ev):
 		var pos = ev.pos
 
 		var element = get_parent().get_name()
-		var vector = (ev.pos - get_parent().get_pos()).normalized()
+		print(element)
+		var vector = (ev.pos - get_parent().getCurrentPoint()).normalized()
 
 		bi.set_pos(get_parent().get_pos() + (spread + 5) * vector + Vector2(spread * randf() - spread / 2.0, spread * randf() - spread / 2.0))
 		
 		get_parent().get_parent().add_child(bi)
 
 		
-		bi.set_direct(vector.normalized())
+		bi.set_direct(vector)
 		
 func _ready():
 	

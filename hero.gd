@@ -51,6 +51,10 @@ func _fixed_process(delta):
 
 	lastStep = speed * Vector2(dx, dy)
 	move(lastStep)
+	
+	var pos = get_pos()
+	
+	# print("X: ", pos.x, "Y: ", pos.y)
 
 	rotate()
 
