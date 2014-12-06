@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+var viewbox = OS.get_video_mode_size()
+
 var speed = 3.0
 var lastStep = Vector2(0, 0)
 
@@ -55,7 +57,7 @@ func _fixed_process(delta):
 	lastStep = speed * Vector2(dx, dy)
 	var nextPos = pos + lastStep
 	
-	if Rect2(0, 0, 800, 600).has_point(nextPos):
+	if Rect2(0, 0, viewbox[0], viewbox[1]).has_point(nextPos):
 		move(lastStep)
 	
 	

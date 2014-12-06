@@ -5,12 +5,12 @@ var Enemy = preload("enemy.xml")
 var hero
 var health_bar
 var score_label
-
+var viewbox = OS.get_video_mode_size()
 var scores = 0
 
 func _ready():
 	hero = Hero.instance()
-	hero.set_pos(Vector2(500, 500))
+	hero.set_pos(Vector2(viewbox[0]/2, viewbox[1]/2))
 	health_bar = get_node("health")
 	score_label = get_node("score")
 	add_child(hero)
@@ -24,13 +24,14 @@ func _ready():
 
 func killEnemy(enemy):
 	scores += enemy.getScores()
-	print("Scores: ", scores)
+	print("+++++++++++++++++++++")
+	print(viewbox[0])
 	score_label.set_text("SCORE: " + str(scores))
 	self.remove_and_delete_child(enemy)
 	
 
 func _on_Timer_timeout():
-	var pos = Vector2(1000 * randf(), 1000 * randf())
+	var pos = Vector2(viewbox[0] * randf(), viewbox[1] * randf())
 	var enemy = Enemy.instance()
 	enemy.set_pos(pos)
 	enemy.setHero(hero)
