@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="3" version="1.0" version_name="Godot Engine v1.0.rc1.8ad12525a9">
+<resource_file type="PackedScene" subresource_count="4" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
 	<ext_resource path="res://enemy.png" type="Texture"></ext_resource>
 	<ext_resource path="res://scripts/enemy.gd" type="Script"></ext_resource>
+	<resource type="RectangleShape2D" path="local://1">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 10, 10 </vector2>
+
+	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="31">
+			<string_array  len="37">
 				<string> "Enemy" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "_import_path" </string>
@@ -17,6 +22,9 @@
 				<string> "transform/rot" </string>
 				<string> "transform/scale" </string>
 				<string> "shape_count" </string>
+				<string> "shapes/0/shape" </string>
+				<string> "shapes/0/transform" </string>
+				<string> "shapes/0/trigger" </string>
 				<string> "layers" </string>
 				<string> "collide_with/static" </string>
 				<string> "collide_with/kinematic" </string>
@@ -37,15 +45,18 @@
 				<string> "modulate" </string>
 				<string> "region" </string>
 				<string> "region_rect" </string>
+				<string> "CollisionShape2D" </string>
+				<string> "shape" </string>
+				<string> "trigger" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 2 </int>
+			<int> 3 </int>
 			<string> "variants" </string>
-			<array  len="16" shared="false">
+			<array  len="20" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -53,8 +64,9 @@
 				<vector2> 0, 0 </vector2>
 				<real> 0 </real>
 				<vector2> 1, 1 </vector2>
-				<int> 0 </int>
 				<int> 1 </int>
+				<resource  resource_type="Shape2D" path="local://1">  </resource>
+				<matrix32> 0.892792, -0, 0, 0.932291, 0.220048, 8.80253 </matrix32>
 				<real> 0.08 </real>
 				<resource  resource_type="Script" path="res://scripts/enemy.gd">  </resource>
 				<dictionary  shared="false">
@@ -84,8 +96,6 @@
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
-							<string> "deflight_rot_y" </string>
-							<real> 0.628319 </real>
 							<string> "zfar" </string>
 							<real> 500 </real>
 							<string> "fov" </string>
@@ -99,11 +109,9 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "listener" </string>
-									<bool> True </bool>
-									<string> "use_environment" </string>
-									<bool> False </bool>
 									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "use_environment" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -115,11 +123,9 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "listener" </string>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
-									<bool> False </bool>
-									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -131,11 +137,9 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "listener" </string>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
-									<bool> False </bool>
-									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -147,11 +151,9 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "listener" </string>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
-									<bool> False </bool>
-									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -161,18 +163,12 @@
 							<int> 1 </int>
 							<string> "default_light" </string>
 							<bool> True </bool>
-							<string> "ambient_light_color" </string>
-							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
 							<string> "show_origin" </string>
 							<bool> True </bool>
 							<string> "znear" </string>
 							<real> 0.1 </real>
-							<string> "default_srgb" </string>
-							<bool> False </bool>
-							<string> "deflight_rot_x" </string>
-							<real> 0.942478 </real>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -183,15 +179,18 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<vector2> 0, -0.440125 </vector2>
 				<resource  resource_type="Texture" path="res://enemy.png">  </resource>
+				<int> 0 </int>
 				<color> 1, 1, 1, 1 </color>
 				<rect2> 0, 0, 0, 0 </rect2>
+				<vector2> 0.220048, 8.80253 </vector2>
+				<vector2> 0.892792, 0.932291 </vector2>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="86"> 				-1, -1, 1, 0, -1, 17, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 1, 13, 1, 14, 1, 15, 1, 16, 9, 17, 10, 18, 11, 0, 0, 0, 19, 19, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 12, 8, 5, 9, 6, 20, 13, 21, 1, 22, 4, 23, 3, 24, 1, 25, 8, 26, 8, 27, 7, 28, 14, 29, 3, 30, 15, 0 </int_array>
+			<int_array  len="119"> 				-1, -1, 1, 0, -1, 20, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 7, 15, 1, 16, 1, 17, 1, 18, 1, 19, 10, 20, 11, 21, 12, 0, 0, 0, 22, 22, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 13, 8, 5, 9, 6, 23, 14, 24, 1, 25, 4, 26, 3, 27, 1, 28, 7, 29, 7, 30, 15, 31, 16, 32, 3, 33, 17, 0, 0, 0, 34, 34, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 18, 8, 5, 9, 19, 35, 8, 36, 3, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>

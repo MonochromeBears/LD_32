@@ -12,12 +12,24 @@ func setHero(h):
 	
 func _fixed_process(delta):
 	var point = get_pos()
-	var heroPoint = hero.get_pos() + hero.getLastStep()
+	var lastStep = hero.getLastStep();
+	var heroPoint = hero.get_pos()
+
+	var dist = point.distance_to(heroPoint)
+
 	var moveVect = (heroPoint - point).normalized()
 	var angle = point.angle_to_point(heroPoint)
 	set_rot(angle)
 
-	move(speed * moveVect)
+	var motion = speed * moveVect
+	
+	if dist > 20:
+		move(motion)
+	
+		if (is_colliding()):
+        	var n = get_collision_normal()
+        	motion = n.slide(motion) 
+        	move(motion)
 
 	pass
 	
