@@ -10,11 +10,12 @@ func _input(ev):
 		
 		var pos = ev.pos
 
-		bi.set_pos(get_pos())
+		bi.set_pos(get_parent().get_pos())
 		
-		get_parent().add_child(bi)
+		get_parent().get_parent().add_child(bi)
 
-		var vector = ev.pos-get_pos()
+		var element = get_parent().get_name()
+		var vector = ev.pos-get_parent().get_pos()
 		print(vector.normalized())
 		
 		bi.set_linear_velocity(vector.normalized()*100)
