@@ -49,12 +49,15 @@ func _fixed_process(delta):
 	var dx = (move_left * -1) + (move_right * 1)
 	var dy = (move_up * -1) + (move_down * 1)
 
-	lastStep = speed * Vector2(dx, dy)
-	move(lastStep)
-	
 	var pos = get_pos()
+
+	lastStep = speed * Vector2(dx, dy)
+	var nextPos = pos + lastStep
 	
-	# print("X: ", pos.x, "Y: ", pos.y)
+	if Rect2(0, 0, 800, 600).has_point(nextPos):
+		move(lastStep)
+	
+	
 
 	rotate()
 

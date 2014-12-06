@@ -25,8 +25,12 @@ func killEnemy(enemy):
 	
 
 func _on_Timer_timeout():
+	var pos = Vector2(1000 * randf(), 1000 * randf())
 	var enemy = Enemy.instance()
-	enemy.set_pos(Vector2(1000 * randf(), 1000 * randf()))
+	enemy.set_pos(pos)
 	enemy.setHero(hero)
 	add_child(enemy)
-	pass # replace with function body
+	print("Creating enemy in (", pos.x, ", ", pos.y,")")
+	pass 
+	# replace with function body
+	
