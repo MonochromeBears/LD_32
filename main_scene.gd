@@ -3,12 +3,14 @@ extends Node
 var Hero = preload("hero.xml")
 var Enemy = preload("enemy.xml")
 var hero
+var health_bar
 
 var scores = 0
 
 func _ready():
 	hero = Hero.instance()
 	hero.set_pos(Vector2(500, 500))
+	health_bar = get_node("health")
 	add_child(hero)
 	for i in range(1):
 		var enemy = Enemy.instance()
@@ -31,6 +33,7 @@ func _on_Timer_timeout():
 	enemy.setHero(hero)
 	add_child(enemy)
 	print("Creating enemy in (", pos.x, ", ", pos.y,")")
-	pass 
-	# replace with function body
+	
+func update_health():
+	health_bar.set_value(hero.health)
 	

@@ -12,6 +12,7 @@ func damage(dmg):
 func setHealth(hp):
 	health = hp
 	print(health)
+	get_parent().update_health()
 	if hp <= 0:
 		destroy()
 		
