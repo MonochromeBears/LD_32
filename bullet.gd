@@ -7,6 +7,9 @@ extends KinematicBody2D
 var disabled=false
 var direct = Vector2(0, 0)
 var speed = 7
+var health = 100
+
+var enemy = preload("res://scripts/enemy.gd")
 
 func disable():
 	if (disabled):
@@ -26,6 +29,9 @@ func _fixed_process(delta):
 	move(speed * direct)
 	
 	if is_colliding():
+		var damaged = get_collider()
+		if damaged extends enemy:
+			get_collider().damage(5)
 		destroy()
 	pass
 	

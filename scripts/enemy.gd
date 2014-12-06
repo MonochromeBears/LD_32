@@ -3,6 +3,18 @@ extends KinematicBody2D
 var hero
 var speed
 
+var health = 100
+
+func setHealth(hp):
+	health = hp
+	print(hp)
+	
+	if (health <= 0):
+		destroy()
+
+func damage(damage):
+	setHealth(health - damage)
+
 func _ready():
 	speed = 2.0 * randf()
 	set_fixed_process(true)
@@ -32,4 +44,6 @@ func _fixed_process(delta):
         	move(motion)
 
 	pass
-	
+
+func destroy():
+	self.get_parent().remove_and_delete_child(self)

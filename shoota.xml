@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="3" version="1.0" version_name="Godot Engine v1.0.rc1.8ad12525a9">
+<resource_file type="PackedScene" subresource_count="3" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
 	<ext_resource path="res://8840807.png" type="Texture"></ext_resource>
 	<ext_resource path="res://1111.gd" type="Script"></ext_resource>
 	<main_resource>
@@ -77,8 +77,6 @@
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
-							<string> "deflight_rot_y" </string>
-							<real> 0.628319 </real>
 							<string> "zfar" </string>
 							<real> 500 </real>
 							<string> "fov" </string>
@@ -92,11 +90,9 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "listener" </string>
-									<bool> True </bool>
-									<string> "use_environment" </string>
-									<bool> False </bool>
 									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "use_environment" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -108,11 +104,9 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "listener" </string>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
-									<bool> False </bool>
-									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -124,11 +118,9 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "listener" </string>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
-									<bool> False </bool>
-									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -140,11 +132,9 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "listener" </string>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
-									<bool> False </bool>
-									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -154,18 +144,12 @@
 							<int> 1 </int>
 							<string> "default_light" </string>
 							<bool> True </bool>
-							<string> "ambient_light_color" </string>
-							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
 							<string> "show_origin" </string>
 							<bool> True </bool>
 							<string> "znear" </string>
 							<real> 0.1 </real>
-							<string> "default_srgb" </string>
-							<bool> False </bool>
-							<string> "deflight_rot_x" </string>
-							<real> 0.942478 </real>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -176,7 +160,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<vector2> 0.7537, 1.15897 </vector2>
 				<vector2> 0.220564, 0.189386 </vector2>

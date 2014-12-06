@@ -77,8 +77,9 @@
 							<string> "current" </string>
 							<int> 0 </int>
 							<string> "sources" </string>
-							<array  len="1" shared="false">
+							<array  len="2" shared="false">
 								<string> "res://scripts/enemy.gd" </string>
+								<string> "res://bullet.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
