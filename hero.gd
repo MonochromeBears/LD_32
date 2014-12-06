@@ -5,10 +5,19 @@ func _ready():
 	set_fixed_process(true)
 	pass
 	
-func rotate(pointTo):
+func getSpeed():
+	return speed
 	
+func getAngle():
+	var pos1 = get_node("Position2D").get_pos()
+	var pos2 = get_pos()
+	var pointTo = pos1 + pos2
 	var mousePoint = Input.get_mouse_pos()
-	set_rot(pointTo.angle_to_point(mousePoint))
+
+	return pointTo.angle_to_point(mousePoint)
+	
+func rotate():
+	set_rot(getAngle())
 
 func _fixed_process(delta):
 
@@ -21,8 +30,5 @@ func _fixed_process(delta):
 	var dy = (move_up * -1) + (move_down * 1)
 
 	move(speed * Vector2(dx, dy))
-	var pos1 = get_node("Position2D").get_pos()
-	var pos2 = get_pos()
-	pos2.x += pos1.x
-	pos2.y += pos1.y
-	rotate(pos2)
+
+	rotate()
