@@ -7,7 +7,6 @@ var health = 100
 
 func setHealth(hp):
 	health = hp
-	print(hp)
 	
 	if (health <= 0):
 		destroy()
