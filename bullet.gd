@@ -8,6 +8,7 @@ var disabled=false
 var direct = Vector2(0, 0)
 var speed = 7
 var health = 100
+var damage = 20
 
 var enemy = preload("res://scripts/enemy.gd")
 
@@ -31,7 +32,7 @@ func _fixed_process(delta):
 	if is_colliding():
 		var damaged = get_collider()
 		if damaged extends enemy:
-			get_collider().damage(5)
+			get_collider().damage(damage)
 		destroy()
 	pass
 	
