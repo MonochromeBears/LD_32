@@ -13,3 +13,4 @@ func _ready():
 
 func _on_TextureButton_pressed():
 	get_node("/root/global").goto_scene("res://main_scene.xml")
+	self.queue_free()
