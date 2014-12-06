@@ -15,6 +15,12 @@ func disable():
 func _ready():
 	# Initalization here
 	get_node("Timer").start()
+	
 	pass
 
 
+
+
+func _on_Timer_timeout():
+	self.get_parent().remove_and_delete_child(self)
+	pass # replace with function body
