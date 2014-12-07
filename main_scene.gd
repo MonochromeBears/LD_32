@@ -16,6 +16,7 @@ var to_menu
 var death_sound
 
 func _ready():
+	randomize()
 	get_node("Timer").start()
 
 	health_bar = get_node("health")

@@ -3,11 +3,11 @@
 	<ext_resource path="res://progress-feel.png" type="Texture"></ext_resource>
 	<ext_resource path="res://progress-bg.png" type="Texture"></ext_resource>
 	<ext_resource path="res://main_scene.gd" type="Script"></ext_resource>
-	<ext_resource path="res://music/game.ogg" type="AudioStream"></ext_resource>
-	<ext_resource path="res://music/bam-motherfucker.ogg" type="AudioStream"></ext_resource>
-	<ext_resource path="res://music/nazzi_death.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://fear-16.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://fear.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://music/nazzi_death.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://music/game.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://music/bam-motherfucker.ogg" type="AudioStream"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
