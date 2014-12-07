@@ -6,10 +6,10 @@
 	<ext_resource path="res://sprites/how-to-hover.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/play.png" type="Texture"></ext_resource>
 	<ext_resource path="res://splash.gd" type="Script"></ext_resource>
-	<ext_resource path="res://sprites/play-hover.png" type="Texture"></ext_resource>
-	<ext_resource path="res://sprites/splash.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/how-to-hower.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/splash.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/how-to.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/play-hover.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
@@ -105,7 +105,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 0 </int>
+							<int> 4 </int>
 							<string> "sources" </string>
 							<array  len="6" shared="false">
 								<string> "res://splash.gd" </string>
@@ -214,7 +214,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<bool> True </bool>
 				<real> 1 </real>

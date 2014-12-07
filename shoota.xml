@@ -160,7 +160,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<vector2> 0.7537, 1.15897 </vector2>
 				<vector2> 0.220564, 0.189386 </vector2>

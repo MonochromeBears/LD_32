@@ -35,6 +35,7 @@ func setHealth(hp):
 		destroy()
 		
 func _ready():
+	get_node("start_pos 2").setRoot(get_parent())
 	set_fixed_process(true)
 	pass
 	
@@ -64,6 +65,8 @@ func _fixed_process(delta):
 		return
 		
 	superstrikeCurrentCooldown += delta
+	
+	get_parent().update_ultimate(superstrikeCurrentCooldown / superstrikeCooldown)
 		
 	var move_left = Input.is_action_pressed("ui_left")
 	var move_right = Input.is_action_pressed("ui_right")
@@ -106,7 +109,6 @@ func superstrike():
 
 func _on_Timer_timeout():
 	get_node("Wave").set_emitting(false)
-	print("superstrike") 
 	for enemy in get_parent().get_children():
 		if isEnemy(enemy):
 			var pushVector = (enemy.get_pos() - getCurrentPoint()).normalized()

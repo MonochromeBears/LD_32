@@ -4,7 +4,8 @@ extends Node2D
 var bullet = preload("res://bullet.xml")
 
 var spread = 20
-
+var root
+	
 func _input(ev):
 
 	if ((ev.type == InputEvent.MOUSE_BUTTON) and (ev.button_index == 1) and ev.is_pressed()):

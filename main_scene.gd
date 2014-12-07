@@ -105,10 +105,10 @@ func killEnemy(enemy):
 	death_sound.play()
 
 func update_shotgun(s):
-	shotgun_bar.set_value(s * 100)
+	shotgun_bar.set_value(100 - s * 100)
 	
 func update_ultimate(s):
-	ultimate_bar.set_value(s * 100)
+	ultimate_bar.set_value(100 - s * 100)
 
 func update_health():
 	health_bar.set_value(hero.health * 5)
