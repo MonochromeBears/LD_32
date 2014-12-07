@@ -3,6 +3,7 @@ extends Node
 var Hero = preload("hero.xml")
 var Enemy = preload("enemy.xml")
 var Boss = preload("booboss.xml")
+var deadBody = preload("DeadEnemy.xml")
 
 var bossCounter = 0
 var hero
@@ -42,7 +43,7 @@ func getEnemySpeed():
 func createEnemy():
 	var pos = Vector2(viewbox[0] * randf(), viewbox[1] * randf())
 	var enemy = Enemy.instance()
-
+	
 	enemy.setHealth(getEnemyHealth())
 	enemy.setSpeed(getEnemySpeed())
 	enemy.setHero(hero)
@@ -73,6 +74,10 @@ func addScores(s):
 func killEnemy(enemy):
 	addScores(enemy.getScores())
 	#self.remove_and_delete_child(enemy)
+	var Decal = deadBody.instance()
+	Decal.set_pos(enemy.get_pos())
+	Decal.set_rot(enemy.get_rot())
+	get_child("deadBodies").add_child(Decal)
 	enemy.queue_free()
 	death_sound.play()
 	
