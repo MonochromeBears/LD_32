@@ -11,6 +11,8 @@ var bossCounter = 0
 var hero
 var health_bar
 var score_label
+var shotgun_bar
+var ultimate_bar
 var viewbox = OS.get_video_mode_size()
 var scores = 0
 
@@ -22,6 +24,8 @@ func _ready():
 
 	health_bar = get_node("health")
 	score_label = get_node("score")
+	shotgun_bar = get_node("shotgun")
+	ultimate_bar = get_node("ultimate")
 	death_sound = get_node("death")
 	
 	createHero()
@@ -99,7 +103,12 @@ func killEnemy(enemy):
 	get_node("deadBodies").add_child(Decal)
 	enemy.queue_free()
 	death_sound.play()
+
+func update_shotgun(s):
+	shotgun_bar.set_value(s * 100)
 	
+func update_ultimate(s):
+	ultimate_bar.set_value(s * 100)
 
 func update_health():
 	health_bar.set_value(hero.health * 5)
