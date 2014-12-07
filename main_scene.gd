@@ -2,6 +2,9 @@ extends Node
 
 var Hero = preload("hero.xml")
 var Enemy = preload("enemy.xml")
+var Boss = preload("booboss.xml")
+
+var bossCounter = 0
 var hero
 var health_bar
 var score_label
@@ -44,12 +47,29 @@ func createEnemy():
 	enemy.set_pos(pos)
 	add_child(enemy)
 	print("Creating enemy in (", pos.x, ", ", pos.y,")")
+	
+func createBoss():
+	var pos = Vector2(viewbox[0] * randf(), viewbox[1] * randf())
+	var enemy = Boss.instance()
+
+	enemy.setHealth(5 * getEnemyHealth())
+	enemy.setSpeed(getEnemySpeed() / 1.5)
+	enemy.setHero(hero)
+	enemy.set_pos(pos)
+	add_child(enemy)
+	print("Creating boss in (", pos.x, ", ", pos.y,")")
+
+func addScores(s):
+	scores += s
+	score_label.set_text("SCORE: " + str(scores))
+	
+	if scores > 5000 * (bossCounter + 1):
+		bossCounter += 1
+		createBoss()
 
 
 func killEnemy(enemy):
-	scores += enemy.getScores()
-	print("SCORE: " + str(scores))
-	score_label.set_text("SCORE: " + str(scores))
+	addScores(enemy.getScores())
 	#self.remove_and_delete_child(enemy)
 	enemy.queue_free()
 	death_sound.play()

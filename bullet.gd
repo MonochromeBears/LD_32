@@ -14,6 +14,7 @@ var cooldown = 2
 var currentCooldown
 
 var enemy = preload("res://scripts/enemy.gd")
+var boss = preload("res://scripts/booboss.gd")
 
 func disable():
 	if (disabled):
@@ -28,14 +29,18 @@ func _ready():
 	
 func set_direct(d):
 	direct = d
+	
+func isEnemy(obj):
+	return (obj extends enemy) or (obj extends boss)
+
 
 func _fixed_process(delta):
 	move(speed * direct)
 	
 	if is_colliding():
 		var damaged = get_collider()
-		if damaged extends enemy:
-			get_collider().damage(damage)
+		if isEnemy(damaged):
+			damaged.damage(damage)
 			destroy()
 	pass
 	

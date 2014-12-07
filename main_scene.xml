@@ -92,12 +92,15 @@
 							<string> "current" </string>
 							<int> 2 </int>
 							<string> "sources" </string>
-							<array  len="5" shared="false">
+							<array  len="8" shared="false">
 								<string> "res://main_scene.gd" </string>
 								<string> "res://scripts/enemy.gd" </string>
 								<string> "res://splash.gd" </string>
 								<string> "res://hero.gd" </string>
 								<string> "res://1111.gd" </string>
+								<string> "res://scripts/booboss.gd" </string>
+								<string> "res://rocket/bullet.gd" </string>
+								<string> "res://bullet.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
