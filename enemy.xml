@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="4" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
-	<ext_resource path="res://scripts/enemy.gd" type="Script"></ext_resource>
+<resource_file type="PackedScene" subresource_count="5" version="1.0" version_name="Godot Engine v1.0.rc1.8ad12525a9">
+	<ext_resource path="res://bullet.png" type="Texture"></ext_resource>
 	<ext_resource path="res://enemy.png" type="Texture"></ext_resource>
+	<ext_resource path="res://scripts/enemy.gd" type="Script"></ext_resource>
 	<resource type="RectangleShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2 name="extents"> 10, 10 </vector2>
@@ -10,7 +11,7 @@
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="37">
+			<string_array  len="96">
 				<string> "Enemy" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "_import_path" </string>
@@ -33,6 +34,65 @@
 				<string> "collision/margin" </string>
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
+				<string> "Particles2D" </string>
+				<string> "config/amount" </string>
+				<string> "config/lifetime" </string>
+				<string> "config/time_scale" </string>
+				<string> "config/preprocess" </string>
+				<string> "config/emit_timeout" </string>
+				<string> "config/emitting" </string>
+				<string> "config/offset" </string>
+				<string> "config/half_extents" </string>
+				<string> "config/local_space" </string>
+				<string> "config/explosiveness" </string>
+				<string> "config/flip_h" </string>
+				<string> "config/flip_v" </string>
+				<string> "config/texture" </string>
+				<string> "config/h_frames" </string>
+				<string> "config/v_frames" </string>
+				<string> "params/direction" </string>
+				<string> "params/spread" </string>
+				<string> "params/linear_velocity" </string>
+				<string> "params/spin_velocity" </string>
+				<string> "params/orbit_velocity" </string>
+				<string> "params/gravity_direction" </string>
+				<string> "params/gravity_strength" </string>
+				<string> "params/radial_accel" </string>
+				<string> "params/tangential_accel" </string>
+				<string> "params/damping" </string>
+				<string> "params/initial_angle" </string>
+				<string> "params/initial_size" </string>
+				<string> "params/final_size" </string>
+				<string> "params/hue_variation" </string>
+				<string> "params/anim_speed_scale" </string>
+				<string> "params/anim_initial_pos" </string>
+				<string> "randomness/direction" </string>
+				<string> "randomness/spread" </string>
+				<string> "randomness/linear_velocity" </string>
+				<string> "randomness/spin_velocity" </string>
+				<string> "randomness/orbit_velocity" </string>
+				<string> "randomness/gravity_direction" </string>
+				<string> "randomness/gravity_strength" </string>
+				<string> "randomness/radial_accel" </string>
+				<string> "randomness/tangential_accel" </string>
+				<string> "randomness/damping" </string>
+				<string> "randomness/initial_angle" </string>
+				<string> "randomness/initial_size" </string>
+				<string> "randomness/final_size" </string>
+				<string> "randomness/hue_variation" </string>
+				<string> "randomness/anim_speed_scale" </string>
+				<string> "randomness/anim_initial_pos" </string>
+				<string> "color_phases/count" </string>
+				<string> "phase_0/pos" </string>
+				<string> "phase_0/color" </string>
+				<string> "phase_1/pos" </string>
+				<string> "phase_1/color" </string>
+				<string> "phase_2/pos" </string>
+				<string> "phase_2/color" </string>
+				<string> "phase_3/pos" </string>
+				<string> "phase_3/color" </string>
+				<string> "emission_points" </string>
+				<string> "Particles2D 2" </string>
 				<string> "Sprite" </string>
 				<string> "texture" </string>
 				<string> "centered" </string>
@@ -54,9 +114,9 @@
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 3 </int>
+			<int> 5 </int>
 			<string> "variants" </string>
-			<array  len="20" shared="false">
+			<array  len="31" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -101,6 +161,8 @@
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
+							<string> "deflight_rot_y" </string>
+							<real> 0.628319 </real>
 							<string> "zfar" </string>
 							<real> 500 </real>
 							<string> "fov" </string>
@@ -114,9 +176,11 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "use_orthogonal" </string>
-									<bool> False </bool>
+									<string> "listener" </string>
+									<bool> True </bool>
 									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -128,9 +192,11 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "use_orthogonal" </string>
+									<string> "listener" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -142,9 +208,11 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "use_orthogonal" </string>
+									<string> "listener" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -156,9 +224,11 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "use_orthogonal" </string>
+									<string> "listener" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -168,12 +238,18 @@
 							<int> 1 </int>
 							<string> "default_light" </string>
 							<bool> True </bool>
+							<string> "ambient_light_color" </string>
+							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
 							<string> "show_origin" </string>
 							<bool> True </bool>
 							<string> "znear" </string>
 							<real> 0.1 </real>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -184,8 +260,19 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
+				<vector2> -11.8834, 8.36241 </vector2>
+				<int> 80 </int>
+				<real> 100 </real>
+				<real> 0.8 </real>
+				<resource  resource_type="Texture" path="res://bullet.png">  </resource>
+				<real> 10 </real>
+				<color> 0, 0, 0, 0.177212 </color>
+				<color> 0, 0, 0, 1 </color>
+				<vector2_array  len="0"> 					 </vector2_array>
+				<vector2> 9.24266, 5.72165 </vector2>
+				<color> 0, 0, 0, 0.176471 </color>
 				<vector2> 0, -0.440125 </vector2>
 				<resource  resource_type="Texture" path="res://enemy.png">  </resource>
 				<int> 0 </int>
@@ -195,7 +282,7 @@
 				<vector2> 0.892792, 0.932291 </vector2>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="119"> 				-1, -1, 1, 0, -1, 20, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 7, 15, 1, 16, 1, 17, 1, 18, 1, 19, 10, 20, 11, 21, 12, 0, 0, 0, 22, 22, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 13, 8, 5, 9, 6, 23, 14, 24, 1, 25, 4, 26, 3, 27, 1, 28, 7, 29, 7, 30, 15, 31, 16, 32, 3, 33, 17, 0, 0, 0, 34, 34, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 18, 8, 5, 9, 19, 35, 8, 36, 3, 0 </int_array>
+			<int_array  len="393"> 				-1, -1, 1, 0, -1, 20, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 7, 15, 1, 16, 1, 17, 1, 18, 1, 19, 10, 20, 11, 21, 12, 0, 0, 0, 22, 22, -1, 65, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 13, 8, 5, 9, 6, 23, 14, 24, 15, 25, 2, 26, 16, 27, 5, 28, 1, 29, 4, 30, 4, 31, 3, 32, 2, 33, 3, 34, 3, 35, 17, 36, 7, 37, 7, 38, 5, 39, 18, 40, 5, 41, 5, 42, 5, 43, 5, 44, 5, 45, 5, 46, 5, 47, 5, 48, 5, 49, 2, 50, 2, 51, 5, 52, 2, 53, 5, 54, 5, 55, 5, 56, 5, 57, 5, 58, 5, 59, 5, 60, 5, 61, 5, 62, 5, 63, 5, 64, 5, 65, 5, 66, 5, 67, 5, 68, 5, 69, 5, 70, 7, 71, 5, 72, 19, 73, 2, 74, 20, 75, 2, 76, 20, 77, 2, 78, 20, 79, 21, 0, 0, 0, 22, 80, -1, 65, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 22, 8, 5, 9, 6, 23, 14, 24, 15, 25, 2, 26, 5, 27, 5, 28, 1, 29, 4, 30, 4, 31, 3, 32, 2, 33, 3, 34, 3, 35, 17, 36, 7, 37, 7, 38, 5, 39, 5, 40, 5, 41, 5, 42, 5, 43, 5, 44, 5, 45, 5, 46, 5, 47, 5, 48, 5, 49, 2, 50, 2, 51, 5, 52, 2, 53, 5, 54, 5, 55, 5, 56, 5, 57, 5, 58, 5, 59, 5, 60, 5, 61, 5, 62, 5, 63, 5, 64, 5, 65, 5, 66, 5, 67, 5, 68, 5, 69, 5, 70, 7, 71, 5, 72, 23, 73, 2, 74, 20, 75, 2, 76, 20, 77, 2, 78, 20, 79, 21, 0, 0, 0, 81, 81, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 24, 8, 5, 9, 6, 82, 25, 83, 1, 84, 4, 85, 3, 86, 1, 87, 7, 88, 7, 89, 26, 90, 27, 91, 3, 92, 28, 0, 0, 0, 93, 93, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 29, 8, 5, 9, 30, 94, 8, 95, 3, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
