@@ -8,6 +8,11 @@ var power = 18
 
 var cooldown = 3
 var currentCooldown = cooldown
+var root
+
+func setRoot(r):
+	root = r
+	
 
 func _input(ev):
 	
@@ -31,6 +36,7 @@ func _input(ev):
 func _process(delta):
 	if currentCooldown < cooldown:
 		currentCooldown += delta
+	root.update_shotgun(currentCooldown / cooldown)
 	
 func _ready():
 	
