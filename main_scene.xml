@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="15" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
-	<ext_resource path="res://music/game.ogg" type="AudioStream"></ext_resource>
-	<ext_resource path="res://music/bam-motherfucker.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://music/nazzi_death.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://music/bam-motherfucker.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://music/game.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://ultimate_progress.png" type="Texture"></ext_resource>
+	<ext_resource path="res://shotgun.png" type="Texture"></ext_resource>
 	<ext_resource path="res://fear-16.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://main_scene.gd" type="Script"></ext_resource>
+	<ext_resource path="res://progress-bg.png" type="Texture"></ext_resource>
 	<ext_resource path="res://snowBack.jpg" type="Texture"></ext_resource>
-	<ext_resource path="res://shotgun.png" type="Texture"></ext_resource>
+	<ext_resource path="res://ultimate.png" type="Texture"></ext_resource>
 	<ext_resource path="res://shotgun_progress.png" type="Texture"></ext_resource>
 	<ext_resource path="res://fear.fnt" type="Font"></ext_resource>
-	<ext_resource path="res://progress-bg.png" type="Texture"></ext_resource>
-	<ext_resource path="res://ultimate.png" type="Texture"></ext_resource>
 	<ext_resource path="res://pistol.png" type="Texture"></ext_resource>
 	<ext_resource path="res://progress-feel.png" type="Texture"></ext_resource>
-	<ext_resource path="res://ultimate_progress.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
@@ -95,7 +95,7 @@
 				<string> "texture/progress" </string>
 				<string> "health label" </string>
 				<string> "pistol" </string>
-				<string> "shutgun" </string>
+				<string> "shotgun" </string>
 				<string> "ultimate" </string>
 				<string> "_on_Timer_timeout" </string>
 				<string> "timeout" </string>
@@ -280,7 +280,7 @@
 				<resource  resource_type="Texture" path="res://ultimate_progress.png">  </resource>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="553"> 				-1, -1, 1, 0, -1, 3, 2, 0, 3, 1, 4, 2, 0, 0, 0, 5, 5, -1, 19, 2, 0, 6, 3, 7, 4, 8, 4, 9, 3, 10, 5, 11, 6, 12, 7, 13, 8, 14, 3, 15, 9, 16, 10, 17, 10, 18, 11, 19, 11, 20, 12, 21, 13, 22, 10, 23, 14, 0, 0, 0, 25, 24, -1, 8, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 10, 9, 11, 6, 12, 15, 0, 0, 0, 26, 26, -1, 4, 2, 0, 27, 4, 28, 10, 29, 3, 0, 0, 0, 30, 30, -1, 7, 2, 0, 31, 16, 32, 10, 33, 3, 34, 6, 35, 3, 36, 10, 0, 0, 0, 30, 37, -1, 7, 2, 0, 31, 17, 32, 10, 33, 10, 34, 6, 35, 3, 36, 10, 0, 0, 0, 39, 38, -1, 32, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 40, 18, 41, 19, 42, 20, 43, 21, 44, 0, 45, 0, 46, 0, 47, 0, 48, 3, 49, 3, 50, 22, 51, 4, 52, 23, 53, 24, 54, 6, 55, 4, 56, 4, 57, 4, 58, 6, 59, 10, 60, 10, 61, 25, 62, 12, 63, 12, 64, 10, 65, 10, 66, 26, 0, 0, 0, 30, 67, -1, 7, 2, 0, 31, 27, 32, 10, 33, 10, 34, 6, 35, 10, 36, 10, 0, 0, 0, 69, 68, -1, 29, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 40, 28, 41, 29, 42, 30, 43, 31, 70, 32, 44, 0, 45, 0, 46, 0, 47, 0, 48, 10, 49, 3, 50, 22, 71, 22, 51, 4, 54, 6, 55, 33, 56, 4, 57, 6, 58, 33, 59, 10, 60, 10, 72, 34, 73, 35, 74, 36, 0, 0, 0, 39, 75, -1, 31, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 40, 37, 41, 38, 42, 39, 43, 40, 44, 0, 45, 0, 46, 0, 47, 0, 48, 3, 49, 3, 50, 22, 51, 4, 52, 41, 54, 6, 55, 4, 56, 4, 57, 4, 58, 6, 59, 10, 60, 10, 61, 32, 62, 12, 63, 12, 64, 10, 65, 10, 66, 26, 0, 0, 0, 69, 76, -1, 28, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 40, 42, 41, 43, 42, 44, 43, 45, 44, 0, 45, 0, 46, 0, 47, 0, 48, 10, 49, 3, 50, 22, 71, 22, 51, 4, 54, 6, 55, 33, 56, 4, 57, 6, 58, 4, 59, 10, 60, 10, 72, 46, 73, 35, 74, 35, 0, 0, 0, 69, 77, -1, 28, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 40, 47, 41, 43, 42, 48, 43, 45, 44, 0, 45, 0, 46, 0, 47, 0, 48, 10, 49, 3, 50, 22, 71, 22, 51, 4, 54, 6, 55, 33, 56, 4, 57, 6, 58, 4, 59, 10, 60, 10, 72, 49, 73, 35, 74, 50, 0, 0, 0, 69, 78, -1, 28, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 40, 51, 41, 43, 42, 52, 43, 45, 44, 0, 45, 0, 46, 0, 47, 0, 48, 10, 49, 3, 50, 22, 71, 22, 51, 4, 54, 6, 55, 33, 56, 4, 57, 6, 58, 4, 59, 10, 60, 10, 72, 53, 73, 35, 74, 54, 0 </int_array>
+			<int_array  len="553"> 				-1, -1, 1, 0, -1, 3, 2, 0, 3, 1, 4, 2, 0, 0, 0, 5, 5, -1, 19, 2, 0, 6, 3, 7, 4, 8, 4, 9, 3, 10, 5, 11, 6, 12, 7, 13, 8, 14, 3, 15, 9, 16, 10, 17, 10, 18, 11, 19, 11, 20, 12, 21, 13, 22, 10, 23, 14, 0, 0, 0, 25, 24, -1, 8, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 10, 9, 11, 6, 12, 15, 0, 0, 0, 26, 26, -1, 4, 2, 0, 27, 4, 28, 10, 29, 3, 0, 0, 0, 30, 30, -1, 7, 2, 0, 31, 16, 32, 10, 33, 3, 34, 6, 35, 3, 36, 10, 0, 0, 0, 30, 37, -1, 7, 2, 0, 31, 17, 32, 10, 33, 10, 34, 6, 35, 3, 36, 10, 0, 0, 0, 39, 38, -1, 32, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 40, 18, 41, 19, 42, 20, 43, 21, 44, 0, 45, 0, 46, 0, 47, 0, 48, 3, 49, 3, 50, 22, 51, 4, 52, 23, 53, 24, 54, 6, 55, 4, 56, 4, 57, 4, 58, 6, 59, 10, 60, 10, 61, 25, 62, 12, 63, 12, 64, 10, 65, 10, 66, 26, 0, 0, 0, 30, 67, -1, 7, 2, 0, 31, 27, 32, 10, 33, 10, 34, 6, 35, 10, 36, 10, 0, 0, 0, 69, 68, -1, 29, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 40, 28, 41, 29, 42, 30, 43, 31, 70, 32, 44, 0, 45, 0, 46, 0, 47, 0, 48, 10, 49, 3, 50, 22, 71, 22, 51, 4, 54, 6, 55, 33, 56, 4, 57, 6, 58, 33, 59, 10, 60, 10, 72, 34, 73, 35, 74, 36, 0, 0, 0, 39, 75, -1, 31, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 40, 37, 41, 38, 42, 39, 43, 40, 44, 0, 45, 0, 46, 0, 47, 0, 48, 3, 49, 3, 50, 22, 51, 4, 52, 41, 54, 6, 55, 4, 56, 4, 57, 4, 58, 6, 59, 10, 60, 10, 61, 32, 62, 12, 63, 12, 64, 10, 65, 10, 66, 26, 0, 0, 0, 69, 76, -1, 28, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 40, 42, 41, 43, 42, 44, 43, 45, 44, 0, 45, 0, 46, 0, 47, 0, 48, 10, 49, 3, 50, 22, 71, 22, 51, 4, 54, 6, 55, 33, 56, 4, 57, 6, 58, 6, 59, 10, 60, 10, 72, 46, 73, 35, 74, 35, 0, 0, 0, 69, 77, -1, 28, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 40, 47, 41, 43, 42, 48, 43, 45, 44, 0, 45, 0, 46, 0, 47, 0, 48, 10, 49, 3, 50, 22, 71, 22, 51, 4, 54, 6, 55, 33, 56, 4, 57, 6, 58, 6, 59, 10, 60, 10, 72, 49, 73, 35, 74, 50, 0, 0, 0, 69, 78, -1, 28, 2, 0, 6, 3, 7, 4, 8, 4, 9, 10, 40, 51, 41, 43, 42, 52, 43, 45, 44, 0, 45, 0, 46, 0, 47, 0, 48, 10, 49, 3, 50, 22, 71, 22, 51, 4, 54, 6, 55, 33, 56, 4, 57, 6, 58, 6, 59, 10, 60, 10, 72, 53, 73, 35, 74, 54, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="6"> 				3, 0, 80, 79, 2, 0 </int_array>
 		</dictionary>
