@@ -96,7 +96,7 @@ func killEnemy(enemy):
 	Decal.set_pos(enemy.get_pos())
 	Decal.set_rot(enemy.get_rot())
 	enemyCounter -= 1
-	get_child("deadBodies").add_child(Decal)
+	get_node("deadBodies").add_child(Decal)
 	enemy.queue_free()
 	death_sound.play()
 	
