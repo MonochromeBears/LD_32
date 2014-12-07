@@ -8,7 +8,7 @@ var disabled=false
 var direct = Vector2(0, 0)
 var speed = 7
 var health = 100
-var damage = 20
+var damage = 3
 
 var enemy = preload("res://scripts/enemy.gd")
 

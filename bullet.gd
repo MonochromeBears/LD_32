@@ -10,6 +10,9 @@ var speed = 7
 
 var damage = 1
 
+var cooldown = 2
+var currentCooldown
+
 var enemy = preload("res://scripts/enemy.gd")
 
 func disable():
