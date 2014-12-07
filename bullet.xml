@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="5" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
-	<ext_resource path="res://bullet.gd" type="Script"></ext_resource>
 	<ext_resource path="res://bullet.png" type="Texture"></ext_resource>
-	<resource type="CircleShape2D" path="local://0">
+	<ext_resource path="res://bullet.gd" type="Script"></ext_resource>
+	<resource type="CircleShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<real name="radius"> 10 </real>
 
 	</resource>
-	<resource type="GDScript" path="local://1">
+	<resource type="GDScript" path="local://2">
 		<string name="script/source"> "" </string>
 
 	</resource>
@@ -113,7 +113,7 @@
 				<real> 0 </real>
 				<vector2> 1, 1 </vector2>
 				<int> 1 </int>
-				<resource  resource_type="Shape2D" path="local://0">  </resource>
+				<resource  resource_type="Shape2D" path="local://1">  </resource>
 				<matrix32> 0.552973, -0, 0, 0.530622, -3.33786e-06, 0.0968567 </matrix32>
 				<real> 0.08 </real>
 				<resource  resource_type="Script" path="res://bullet.gd">  </resource>
@@ -229,7 +229,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<int> 30 </int>
 				<real> 0.2 </real>
@@ -244,7 +244,7 @@
 				<color> 0, 0, 0, 1 </color>
 				<vector2_array  len="0"> 					 </vector2_array>
 				<real> 3 </real>
-				<resource  resource_type="Script" path="local://1">  </resource>
+				<resource  resource_type="Script" path="local://2">  </resource>
 				<vector2> -3.33786e-06, 0.0968567 </vector2>
 				<vector2> 0.552973, 0.530622 </vector2>
 			</array>

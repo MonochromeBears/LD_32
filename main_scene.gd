@@ -30,10 +30,18 @@ func createHero():
 	hero.set_pos(Vector2(viewbox[0] / 2, viewbox[1] / 2))
 	add_child(hero)
 	
+func getEnemyHealth():
+	return 5 + 2 * log(scores / 100 + 1)
+	
+func getEnemySpeed():
+	return log(scores / 9 + 2000) - 6.6
+	
 func createEnemy():
 	var pos = Vector2(viewbox[0] * randf(), viewbox[1] * randf())
 	var enemy = Enemy.instance()
-	enemy.setHealth()
+
+	enemy.setHealth(getEnemyHealth())
+	enemy.setSpeed(getEnemySpeed())
 	enemy.setHero(hero)
 	enemy.set_pos(pos)
 	add_child(enemy)

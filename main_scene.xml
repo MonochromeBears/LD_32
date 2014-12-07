@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
-	<ext_resource path="res://music/game.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://music/bam-motherfucker.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://music/nazzi_death.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://music/game.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://test.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://main_scene.gd" type="Script"></ext_resource>
 	<main_resource>

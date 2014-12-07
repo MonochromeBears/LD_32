@@ -1,24 +1,26 @@
 extends KinematicBody2D
 
 var hero
-var speed
+var speed = 1
 
 var health = 100
 var cooldown = 1
 var currentCooldown = 1
-var scores = 5
+var scores = 500
 
 func setHealth(hp):
 	health = hp
 	
 	if (health <= 0):
 		get_parent().killEnemy(self)
+		
+func setSpeed(sp):
+	speed = sp
 
 func damage(damage):
 	setHealth(health - damage)
 
 func _ready():
-	speed = 2.0 * randf()
 	set_fixed_process(true)
 	
 func setHero(h):
