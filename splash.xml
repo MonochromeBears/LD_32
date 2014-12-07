@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="11" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
-	<ext_resource path="res://music/desert-eagle-fire.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://music/splash.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://music/desert-eagle-fire.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://sprites/how-to-hower.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/play-pressed.png" type="Texture"></ext_resource>
-	<ext_resource path="res://sprites/how-to-hover.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/play.png" type="Texture"></ext_resource>
 	<ext_resource path="res://splash.gd" type="Script"></ext_resource>
-	<ext_resource path="res://sprites/how-to-hower.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/how-to-hover.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/splash.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/how-to.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/play-hover.png" type="Texture"></ext_resource>
@@ -105,7 +105,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 4 </int>
+							<int> 2 </int>
 							<string> "sources" </string>
 							<array  len="6" shared="false">
 								<string> "res://splash.gd" </string>

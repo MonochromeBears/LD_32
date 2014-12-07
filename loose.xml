@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="7" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
-	<ext_resource path="res://fear-40.fnt" type="Font"></ext_resource>
-	<ext_resource path="res://sprites/back-to-menu-hover.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/loose.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/back-to-menu-pressed.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/back-to-menu.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/back-to-menu-hover.png" type="Texture"></ext_resource>
+	<ext_resource path="res://fear-40.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://loose.gd" type="Script"></ext_resource>
-	<ext_resource path="res://sprites/loose.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
@@ -109,11 +109,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.263521 </real>
+							<real> 0.487677 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -1136.11, -532.894 </vector2>
+							<vector2> -523.632, -300.067 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -209,18 +209,18 @@
 				<int> 0 </int>
 				<color> 1, 1, 1, 1 </color>
 				<rect2> 0, 0, 0, 0 </rect2>
-				<real> 442 </real>
-				<real> 304 </real>
-				<real> 782 </real>
-				<real> 724 </real>
+				<real> 469 </real>
+				<real> 337 </real>
+				<real> 809 </real>
+				<real> 757 </real>
 				<int> 2 </int>
 				<resource  resource_type="Texture" path="res://sprites/back-to-menu.png">  </resource>
 				<resource  resource_type="Texture" path="res://sprites/back-to-menu-pressed.png">  </resource>
 				<resource  resource_type="Texture" path="res://sprites/back-to-menu-hover.png">  </resource>
-				<resource name=""></resource>				<real> 438 </real>
-				<real> 236 </real>
-				<real> 741 </real>
-				<real> 289 </real>
+				<resource name=""></resource>				<real> 461 </real>
+				<real> 271 </real>
+				<real> 764 </real>
+				<real> 324 </real>
 				<resource  resource_type="Font" path="res://fear-40.fnt">  </resource>
 				<string> "SCORE: 100500" </string>
 				<real> -1 </real>

@@ -45,7 +45,7 @@ func getEnemyHealth():
 	
 func getEnemySpeed():
 	var speed = scores / 100000.0 + 0.5
-	get_node("Timer").set_wait_time(1 / (speed))
+	get_node("Timer").set_wait_time(1 / (2 * speed))
 	return scores / 100000.0 + 0.5
 
 func newCord():
@@ -106,10 +106,10 @@ func killEnemy(enemy):
 	death_sound.play()
 
 func update_shotgun(s):
-	shotgun_bar.set_value(s * 100)
+	shotgun_bar.set_value(100 - s * 100)
 	
 func update_ultimate(s):
-	ultimate_bar.set_value(s * 100)
+	ultimate_bar.set_value(100 - s * 100)
 
 func update_health():
 	health_bar.set_value(hero.health * 5)

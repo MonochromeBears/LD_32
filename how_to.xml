@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
-	<ext_resource path="res://how_to.gd" type="Script"></ext_resource>
-	<ext_resource path="res://sprites/bm-pressed.png" type="Texture"></ext_resource>
-	<ext_resource path="res://sprites/how-to-bg.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/bm.png" type="Texture"></ext_resource>
+	<ext_resource path="res://how_to.gd" type="Script"></ext_resource>
+	<ext_resource path="res://sprites/how-to-bg.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/bm-pressed.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/bm-hover.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
@@ -86,11 +86,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.9025 </real>
+							<real> 0.323533 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -274.103, -15.6253 </vector2>
+							<vector2> -1280, -753.674 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -184,7 +184,7 @@
 				<bool> True </bool>
 				<real> 1 </real>
 				<bool> False </bool>
-				<vector2> -25.8127, -5.16235 </vector2>
+				<vector2> 5.92076, 33.2518 </vector2>
 				<real> 0 </real>
 				<vector2> 1, 1 </vector2>
 				<resource  resource_type="Texture" path="res://sprites/how-to-bg.png">  </resource>
@@ -193,10 +193,10 @@
 				<int> 0 </int>
 				<color> 1, 1, 1, 1 </color>
 				<rect2> 0, 0, 0, 0 </rect2>
-				<real> 447 </real>
-				<real> 141 </real>
-				<real> 847 </real>
-				<real> 537 </real>
+				<real> 860 </real>
+				<real> 404 </real>
+				<real> 1260 </real>
+				<real> 800 </real>
 				<int> 2 </int>
 				<resource  resource_type="Texture" path="res://sprites/bm.png">  </resource>
 				<resource  resource_type="Texture" path="res://sprites/bm-pressed.png">  </resource>
