@@ -4,6 +4,7 @@ var Hero = preload("hero.xml")
 var Enemy = preload("enemy.xml")
 var Boss = preload("booboss.xml")
 var deadBody = preload("DeadEnemy.xml")
+var Loose = preload("loose.xml")
 
 var enemyCounter = 0
 
@@ -102,6 +103,8 @@ func killEnemy(enemy):
 
 func update_health():
 	health_bar.set_value(hero.health * 5)
+	if(hero.health <= 0):
+		game_over()
 
 func _on_Timer_timeout_():
 	createEnemy()
@@ -109,3 +112,11 @@ func _on_Timer_timeout_():
 func _on_backToMenu_pressed():
 	get_node("/root/global").goto_scene("res://splash.xml")
 	self.queue_free()
+	
+func game_over():
+	var loose = Loose.instance()
+	add_child(loose)
+	loose.set_pos(Vector2(0, 0))
+
+	loose.setScore(scores)
+	

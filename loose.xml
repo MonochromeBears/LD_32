@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
-	<ext_resource path="res://sprites/loose.png" type="Texture"></ext_resource>
+<resource_file type="PackedScene" subresource_count="7" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
+	<ext_resource path="res://fear-40.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://sprites/back-to-menu-hover.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/back-to-menu-pressed.png" type="Texture"></ext_resource>
 	<ext_resource path="res://sprites/back-to-menu.png" type="Texture"></ext_resource>
 	<ext_resource path="res://loose.gd" type="Script"></ext_resource>
-	<ext_resource path="res://sprites/back-to-menu-hover.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/loose.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="49">
-				<string> "Node" </string>
+			<string_array  len="65">
+				<string> "Node2D" </string>
 				<string> "_import_path" </string>
-				<string> "script/script" </string>
-				<string> "__meta__" </string>
-				<string> "Sprite" </string>
 				<string> "visibility/visible" </string>
 				<string> "visibility/opacity" </string>
 				<string> "visibility/self_opacity" </string>
@@ -21,6 +19,9 @@
 				<string> "transform/pos" </string>
 				<string> "transform/rot" </string>
 				<string> "transform/scale" </string>
+				<string> "script/script" </string>
+				<string> "__meta__" </string>
+				<string> "Sprite" </string>
 				<string> "texture" </string>
 				<string> "centered" </string>
 				<string> "offset" </string>
@@ -56,6 +57,22 @@
 				<string> "textures/disabled" </string>
 				<string> "textures/focused" </string>
 				<string> "textures/click_mask" </string>
+				<string> "score" </string>
+				<string> "Label" </string>
+				<string> "custom_fonts/font" </string>
+				<string> "range/min" </string>
+				<string> "range/max" </string>
+				<string> "range/step" </string>
+				<string> "range/page" </string>
+				<string> "range/value" </string>
+				<string> "range/exp_edit" </string>
+				<string> "rounded_values" </string>
+				<string> "text" </string>
+				<string> "align" </string>
+				<string> "valign" </string>
+				<string> "autowrap" </string>
+				<string> "uppercase" </string>
+				<string> "percent_visible" </string>
 				<string> "_on_backToMenu_pressed" </string>
 				<string> "pressed" </string>
 			</string_array>
@@ -64,10 +81,16 @@
 			<string> "conn_count" </string>
 			<int> 1 </int>
 			<string> "node_count" </string>
-			<int> 3 </int>
+			<int> 4 </int>
 			<string> "variants" </string>
-			<array  len="24" shared="false">
+			<array  len="30" shared="false">
 				<node_path> "" </node_path>
+				<bool> True </bool>
+				<real> 1 </real>
+				<bool> False </bool>
+				<vector2> 0, 0 </vector2>
+				<real> 0 </real>
+				<vector2> 1, 1 </vector2>
 				<resource  resource_type="Script" path="res://loose.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
@@ -86,11 +109,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.358486 </real>
+							<real> 0.263521 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -1091.25, -492.464 </vector2>
+							<vector2> -1136.11, -532.894 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -179,33 +202,33 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
-				<bool> True </bool>
-				<real> 1 </real>
-				<bool> False </bool>
-				<vector2> 640.01, 399.549 </vector2>
-				<real> 0 </real>
-				<vector2> 1, 1 </vector2>
 				<resource  resource_type="Texture" path="res://sprites/loose.png">  </resource>
-				<vector2> 0, 0 </vector2>
 				<int> 1 </int>
 				<int> 0 </int>
 				<color> 1, 1, 1, 1 </color>
 				<rect2> 0, 0, 0, 0 </rect2>
-				<real> 451 </real>
-				<real> 270 </real>
-				<real> 791 </real>
-				<real> 690 </real>
+				<real> 442 </real>
+				<real> 304 </real>
+				<real> 782 </real>
+				<real> 724 </real>
 				<int> 2 </int>
 				<resource  resource_type="Texture" path="res://sprites/back-to-menu.png">  </resource>
 				<resource  resource_type="Texture" path="res://sprites/back-to-menu-pressed.png">  </resource>
 				<resource  resource_type="Texture" path="res://sprites/back-to-menu-hover.png">  </resource>
-				<resource name=""></resource>			</array>
+				<resource name=""></resource>				<real> 438 </real>
+				<real> 236 </real>
+				<real> 741 </real>
+				<real> 289 </real>
+				<resource  resource_type="Font" path="res://fear-40.fnt">  </resource>
+				<string> "SCORE: 100500" </string>
+				<real> -1 </real>
+			</array>
 			<string> "nodes" </string>
-			<int_array  len="119"> 				-1, -1, 0, 0, -1, 3, 1, 0, 2, 1, 3, 2, 0, 0, 0, 4, 4, -1, 19, 1, 0, 5, 3, 6, 4, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 10, 15, 5, 16, 5, 17, 11, 18, 11, 19, 12, 20, 13, 21, 5, 22, 14, 0, 0, 0, 24, 23, -1, 27, 1, 0, 5, 3, 6, 4, 7, 4, 8, 5, 25, 15, 26, 16, 27, 17, 28, 18, 29, 0, 30, 0, 31, 0, 32, 0, 33, 5, 34, 3, 35, 19, 36, 19, 37, 4, 38, 5, 39, 5, 40, 5, 41, 20, 42, 21, 43, 22, 44, 23, 45, 23, 46, 23, 0 </int_array>
+			<int_array  len="202"> 				-1, -1, 0, 0, -1, 10, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 0, 0, 0, 11, 11, -1, 19, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 12, 9, 13, 3, 14, 4, 15, 3, 16, 3, 17, 10, 18, 10, 19, 11, 20, 12, 21, 3, 22, 13, 0, 0, 0, 24, 23, -1, 27, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 25, 14, 26, 15, 27, 16, 28, 17, 29, 0, 30, 0, 31, 0, 32, 0, 33, 3, 34, 1, 35, 18, 36, 18, 37, 2, 38, 3, 39, 3, 40, 3, 41, 19, 42, 20, 43, 21, 44, 22, 45, 22, 46, 22, 0, 0, 0, 48, 47, -1, 31, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 25, 23, 26, 24, 27, 25, 28, 26, 29, 0, 30, 0, 31, 0, 32, 0, 33, 1, 34, 1, 35, 18, 37, 2, 49, 27, 50, 5, 51, 2, 52, 2, 53, 2, 54, 5, 55, 3, 56, 3, 57, 28, 58, 10, 59, 10, 60, 3, 61, 3, 62, 29, 0 </int_array>
 			<string> "conns" </string>
-			<int_array  len="6"> 				2, 0, 48, 47, 2, 0 </int_array>
+			<int_array  len="6"> 				2, 0, 64, 63, 2, 0 </int_array>
 		</dictionary>
 
 	</main_resource>

@@ -2,8 +2,8 @@
 <resource_file type="PackedScene" subresource_count="5" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
 	<ext_resource path="res://rocket/shootaR.xml" type="PackedScene"></ext_resource>
 	<ext_resource path="res://hero_gurl.png" type="Texture"></ext_resource>
-	<ext_resource path="res://hero.gd" type="Script"></ext_resource>
 	<ext_resource path="res://shoota.xml" type="PackedScene"></ext_resource>
+	<ext_resource path="res://hero.gd" type="Script"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
@@ -68,7 +68,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 4 </int>
 							<string> "sources" </string>
 							<array  len="5" shared="false">
 								<string> "res://scripts/hero.gd" </string>
