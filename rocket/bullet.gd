@@ -7,8 +7,8 @@ extends KinematicBody2D
 var disabled=false
 var direct = Vector2(0, 0)
 var speed = 7
-
-var damage = 1
+var health = 100
+var damage = 20
 
 var enemy = preload("res://scripts/enemy.gd")
 

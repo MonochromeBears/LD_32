@@ -5,7 +5,7 @@ var viewbox = OS.get_video_mode_size()
 var speed = 3.0
 var lastStep = Vector2(0, 0)
 
-var health = 100
+var health = 20
 
 func damage(dmg):
 	setHealth(health - dmg)

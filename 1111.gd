@@ -7,7 +7,7 @@ var spread = 20
 
 func _input(ev):
 
-	if ((ev.type == InputEvent.MOUSE_BUTTON) and (ev.button_index == 1)):
+	if ((ev.type == InputEvent.MOUSE_BUTTON) and (ev.button_index == 1) and ev.is_pressed()):
 		var bi = bullet.instance()
 		
 		var pos = ev.pos
