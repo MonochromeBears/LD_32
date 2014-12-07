@@ -108,7 +108,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 0 </int>
+							<int> 1 </int>
 							<string> "sources" </string>
 							<array  len="5" shared="false">
 								<string> "res://main_scene.gd" </string>
@@ -133,8 +133,6 @@
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
-							<string> "deflight_rot_y" </string>
-							<real> 0.628319 </real>
 							<string> "zfar" </string>
 							<real> 500 </real>
 							<string> "fov" </string>
@@ -148,11 +146,9 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "listener" </string>
-									<bool> True </bool>
-									<string> "use_environment" </string>
-									<bool> False </bool>
 									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "use_environment" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -164,11 +160,9 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "listener" </string>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
-									<bool> False </bool>
-									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -180,11 +174,9 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "listener" </string>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
-									<bool> False </bool>
-									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -196,11 +188,9 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "listener" </string>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
-									<bool> False </bool>
-									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -210,18 +200,12 @@
 							<int> 1 </int>
 							<string> "default_light" </string>
 							<bool> True </bool>
-							<string> "ambient_light_color" </string>
-							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
 							<string> "show_origin" </string>
 							<bool> True </bool>
 							<string> "znear" </string>
 							<real> 0.1 </real>
-							<string> "default_srgb" </string>
-							<bool> False </bool>
-							<string> "deflight_rot_x" </string>
-							<real> 0.942478 </real>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -356,11 +340,12 @@
 					<string> "__editor_plugin_screen__" </string>
 					<string> "2D" </string>
 				</dictionary>
-				<real> 1 </real>
+				<real> 0.3 </real>
 				<bool> False </bool>
 				<resource  resource_type="AudioStream" path="res://music/game.ogg">  </resource>
 				<real> 0 </real>
 				<resource  resource_type="AudioStream" path="res://music/bam-motherfucker.ogg">  </resource>
+				<real> 1 </real>
 				<real> 345 </real>
 				<real> 19 </real>
 				<real> 492 </real>

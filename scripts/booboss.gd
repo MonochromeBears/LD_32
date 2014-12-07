@@ -61,3 +61,8 @@ func _fixed_process(delta):
 	
 func getScores():
 	return scores
+	
+func pushout(motion):
+	set_collide_with_kinematic_bodies(false)
+	move(motion)
+	set_collide_with_kinematic_bodies(true)

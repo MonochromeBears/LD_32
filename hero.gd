@@ -2,8 +2,19 @@ extends KinematicBody2D
 
 var viewbox = OS.get_video_mode_size()
 
+var enemy = preload("res://scripts/enemy.gd")
+var boss = preload("res://scripts/booboss.gd")
+
 var speed = 3.0
+var superstrikeRange = 75
 var lastStep = Vector2(0, 0)
+
+var superstrikeCooldown = 5
+var superstrikeCurrentCooldown = superstrikeCooldown
+
+
+var dead = false
+var superstrikeReady = true
 
 var health = 20
 
@@ -44,10 +55,17 @@ func getLastStep():
 	return lastStep
 
 func _fixed_process(delta):
+	if dead:
+		return
+		
+	superstrikeCurrentCooldown += delta
+		
 	var move_left = Input.is_action_pressed("ui_left")
 	var move_right = Input.is_action_pressed("ui_right")
 	var move_up = Input.is_action_pressed("ui_up")
 	var move_down = Input.is_action_pressed("ui_down")
+	
+	var superstrike = Input.is_action_pressed("ui_superstrike")
 	
 	var dx = (move_left * -1) + (move_right * 1)
 	var dy = (move_up * -1) + (move_down * 1)
@@ -60,10 +78,25 @@ func _fixed_process(delta):
 	if Rect2(0, 40, viewbox[0], viewbox[1]).has_point(nextPos):
 		move(lastStep)
 	
-	
+	if superstrike and (superstrikeCurrentCooldown >= superstrikeCooldown):
+		superstrike()
 
 	rotate()
 
 func destroy():
+	dead = false
+	pass
+	
+func isEnemy(obj):
+	return (obj extends enemy) or (obj extends boss)
+	
+func superstrike():
+	superstrikeCurrentCooldown = 0
+	print("superstrike") 
+	for enemy in get_parent().get_children():
+		if isEnemy(enemy):
+			var pushVector = (enemy.get_pos() - getCurrentPoint()).normalized()
+			
+			enemy.pushout(superstrikeRange * pushVector)
 	pass
 	

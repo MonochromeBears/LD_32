@@ -50,7 +50,6 @@ func createEnemy():
 	enemy.setHero(hero)
 	enemy.set_pos(pos)
 	add_child(enemy)
-	print("Creating enemy in (", pos.x, ", ", pos.y,")")
 	
 func createBoss():
 	var pos = Vector2(viewbox[0] * randf(), viewbox[1] * randf())
@@ -61,7 +60,6 @@ func createBoss():
 	enemy.setHero(hero)
 	enemy.set_pos(pos)
 	add_child(enemy)
-	print("Creating boss in (", pos.x, ", ", pos.y,")")
 
 func addScores(s):
 	scores += s
