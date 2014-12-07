@@ -24,6 +24,9 @@ func damage(dmg):
 	setHealth(health - dmg)
 	pass
 	
+func isDead():
+	return dead
+	
 func setHealth(hp):
 	health = hp
 	print(health)
@@ -87,6 +90,7 @@ func _fixed_process(delta):
 
 func destroy():
 	dead = true
+	set_collide_with_kinematic_bodies(false)
 	pass
 	
 func isEnemy(obj):
