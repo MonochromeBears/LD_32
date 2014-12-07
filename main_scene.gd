@@ -11,7 +11,6 @@ var health_bar
 var score_label
 var viewbox = OS.get_video_mode_size()
 var scores = 0
-var to_menu
 
 var death_sound
 
@@ -22,7 +21,6 @@ func _ready():
 	health_bar = get_node("health")
 	score_label = get_node("score")
 	death_sound = get_node("death")
-	to_menu = get_node("tomenu")
 	
 	createHero()
 	
@@ -50,7 +48,6 @@ func createEnemy():
 	enemy.setHero(hero)
 	enemy.set_pos(pos)
 	add_child(enemy)
-	print("Creating enemy in (", pos.x, ", ", pos.y,")")
 	
 func createBoss():
 	var pos = Vector2(viewbox[0] * randf(), viewbox[1] * randf())
@@ -61,7 +58,6 @@ func createBoss():
 	enemy.setHero(hero)
 	enemy.set_pos(pos)
 	add_child(enemy)
-	print("Creating boss in (", pos.x, ", ", pos.y,")")
 
 func addScores(s):
 	scores += s
@@ -85,13 +81,10 @@ func killEnemy(enemy):
 
 func update_health():
 	health_bar.set_value(hero.health * 5)
-	if(hero.health <= 0):
-		to_menu.set_pos(Vector2(300, 300))
 
 func _on_Timer_timeout_():
 	createEnemy()
 
-
-func _on_tomenu_pressed():
+func _on_backToMenu_pressed():
 	get_node("/root/global").goto_scene("res://splash.xml")
 	self.queue_free()
