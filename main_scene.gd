@@ -11,7 +11,6 @@ var health_bar
 var score_label
 var viewbox = OS.get_video_mode_size()
 var scores = 0
-var gui
 
 var death_sound
 
@@ -22,7 +21,6 @@ func _ready():
 	health_bar = get_node("health")
 	score_label = get_node("score")
 	death_sound = get_node("death")
-	gui = get_node("gui")
 	
 	createHero()
 	
@@ -83,8 +81,6 @@ func killEnemy(enemy):
 
 func update_health():
 	health_bar.set_value(hero.health * 5)
-	if(hero.health <= 0):
-		gui.set_pos(Vector2(0, 0))
 
 func _on_Timer_timeout_():
 	createEnemy()
