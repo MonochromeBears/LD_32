@@ -57,7 +57,7 @@ func _fixed_process(delta):
 	lastStep = speed * Vector2(dx, dy)
 	var nextPos = pos + lastStep
 	
-	if Rect2(0, 0, viewbox[0], viewbox[1]).has_point(nextPos):
+	if Rect2(0, 40, viewbox[0], viewbox[1]).has_point(nextPos):
 		move(lastStep)
 	
 	

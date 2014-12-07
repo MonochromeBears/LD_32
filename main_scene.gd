@@ -8,11 +8,15 @@ var score_label
 var viewbox = OS.get_video_mode_size()
 var scores = 0
 
+var death_sound
+
 func _ready():
 	hero = Hero.instance()
 	hero.set_pos(Vector2(viewbox[0]/2, viewbox[1]/2))
 	health_bar = get_node("health")
 	score_label = get_node("score")
+	death_sound = get_node("death")
+	health_bar.set_size(Vector2(viewbox[0], 20))
 	add_child(hero)
 	for i in range(1):
 		var enemy = Enemy.instance()
@@ -24,10 +28,10 @@ func _ready():
 
 func killEnemy(enemy):
 	scores += enemy.getScores()
-	print("+++++++++++++++++++++")
-	print(viewbox[0])
+	print("SCORE: " + str(scores))
 	score_label.set_text("SCORE: " + str(scores))
 	self.remove_and_delete_child(enemy)
+	death_sound.play()
 	
 
 func _on_Timer_timeout():
