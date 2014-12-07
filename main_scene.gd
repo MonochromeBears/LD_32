@@ -3,6 +3,7 @@ extends Node
 var Hero = preload("hero.xml")
 var Enemy = preload("enemy.xml")
 var Boss = preload("booboss.xml")
+var deadBody = preload("DeadEnemy.xml")
 
 var bossCounter = 0
 var hero
@@ -15,6 +16,7 @@ var gui
 var death_sound
 
 func _ready():
+	randomize()
 	get_node("Timer").start()
 
 	health_bar = get_node("health")
@@ -34,38 +36,36 @@ func createHero():
 	add_child(hero)
 	
 func getEnemyHealth():
-	return 5 + 2 * log(scores / 100 + 1)
+	return exp(scores / 100000.0 + 1) / 4
 	
 func getEnemySpeed():
-	return log(scores / 9 + 2000) - 6.6
+	return scores / 100000.0 + 0.5
 	
 func createEnemy():
 	var pos = Vector2(viewbox[0] * randf(), viewbox[1] * randf())
 	var enemy = Enemy.instance()
-
+	
 	enemy.setHealth(getEnemyHealth())
 	enemy.setSpeed(getEnemySpeed())
 	enemy.setHero(hero)
 	enemy.set_pos(pos)
 	add_child(enemy)
-	print("Creating enemy in (", pos.x, ", ", pos.y,")")
 	
 func createBoss():
 	var pos = Vector2(viewbox[0] * randf(), viewbox[1] * randf())
 	var enemy = Boss.instance()
 
 	enemy.setHealth(5 * getEnemyHealth())
-	enemy.setSpeed(getEnemySpeed() / 1.5)
+	enemy.setSpeed(getEnemySpeed() * 1.2)
 	enemy.setHero(hero)
 	enemy.set_pos(pos)
 	add_child(enemy)
-	print("Creating boss in (", pos.x, ", ", pos.y,")")
 
 func addScores(s):
 	scores += s
 	score_label.set_text("SCORE: " + str(scores))
 	
-	if scores > 5000 * (bossCounter + 1):
+	if scores > 10000 * (bossCounter + 1):
 		bossCounter += 1
 		createBoss()
 
@@ -73,6 +73,10 @@ func addScores(s):
 func killEnemy(enemy):
 	addScores(enemy.getScores())
 	#self.remove_and_delete_child(enemy)
+	var Decal = deadBody.instance()
+	Decal.set_pos(enemy.get_pos())
+	Decal.set_rot(enemy.get_rot())
+	get_child("deadBodies").add_child(Decal)
 	enemy.queue_free()
 	death_sound.play()
 	
