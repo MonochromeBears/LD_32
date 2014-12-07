@@ -12,6 +12,8 @@ var bossCounter = 0
 var hero
 var health_bar
 var score_label
+var shotgun_bar
+var ultimate_bar
 var viewbox = OS.get_video_mode_size()
 var scores = 0
 
@@ -23,6 +25,8 @@ func _ready():
 
 	health_bar = get_node("health")
 	score_label = get_node("score")
+	shotgun_bar = get_node("shotgun")
+	ultimate_bar = get_node("ultimate")
 	death_sound = get_node("death")
 	
 	createHero()
@@ -96,18 +100,21 @@ func killEnemy(enemy):
 	var Decal = deadBody.instance()
 	Decal.set_pos(enemy.get_pos())
 	Decal.set_rot(enemy.get_rot())
-	get_child("deadBodies").add_child(Decal)
+	enemyCounter -= 1
+	get_node("deadBodies").add_child(Decal)
 	enemy.queue_free()
 	death_sound.play()
+
+func update_shotgun(s):
+	shotgun_bar.set_value(s * 100)
 	
+func update_ultimate(s):
+	ultimate_bar.set_value(s * 100)
 
 func update_health():
 	health_bar.set_value(hero.health * 5)
 	if(hero.health <= 0):
 		game_over()
-
-func _on_Timer_timeout_():
-	createEnemy()
 
 func _on_backToMenu_pressed():
 	get_node("/root/global").goto_scene("res://splash.xml")
@@ -120,3 +127,7 @@ func game_over():
 
 	loose.setScore(scores)
 	
+
+
+func _on_Timer_timeout():
+	createEnemy()

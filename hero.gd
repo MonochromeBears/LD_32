@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 var viewbox = OS.get_video_mode_size()
 
+var explosion = preload("explosion.xml")
+
 var enemy = preload("res://scripts/enemy.gd")
 var boss = preload("res://scripts/booboss.gd")
 
@@ -21,6 +23,9 @@ var health = 20
 func damage(dmg):
 	setHealth(health - dmg)
 	pass
+	
+func isDead():
+	return dead
 	
 func setHealth(hp):
 	health = hp
@@ -85,6 +90,7 @@ func _fixed_process(delta):
 
 func destroy():
 	dead = true
+	set_collide_with_kinematic_bodies(false)
 	pass
 	
 func isEnemy(obj):
@@ -92,11 +98,18 @@ func isEnemy(obj):
 	
 func superstrike():
 	superstrikeCurrentCooldown = 0
+	get_node("Wave").set_emitting(true)
+	get_node("Timer").start()
+	
+	pass
+	
+
+func _on_Timer_timeout():
+	get_node("Wave").set_emitting(false)
 	print("superstrike") 
 	for enemy in get_parent().get_children():
 		if isEnemy(enemy):
 			var pushVector = (enemy.get_pos() - getCurrentPoint()).normalized()
 			
 			enemy.pushout(superstrikeRange * pushVector)
-	pass
-	
+	pass # replace with function body
