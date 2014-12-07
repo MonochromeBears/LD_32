@@ -39,12 +39,12 @@
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
+				<bool> False </bool>
 				<vector2> -3.8147e-005, 0.323486 </vector2>
 				<real> 0 </real>
 				<vector2> 0.5, 0.5 </vector2>
 				<resource  resource_type="Texture" path="res://blood_body.png">  </resource>
 				<vector2> 0, 0 </vector2>
-				<bool> False </bool>
 				<int> 1 </int>
 				<int> 0 </int>
 				<color> 1, 1, 1, 1 </color>
@@ -170,7 +170,7 @@
 				</dictionary>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="47"> 				-1, -1, 1, 0, -1, 20, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 3, 8, 4, 9, 5, 10, 6, 11, 1, 12, 7, 13, 8, 14, 8, 15, 9, 16, 9, 17, 10, 18, 11, 19, 8, 20, 12, 21, 13, 0 </int_array>
+			<int_array  len="47"> 				-1, -1, 1, 0, -1, 20, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 1, 12, 8, 13, 3, 14, 3, 15, 9, 16, 9, 17, 10, 18, 11, 19, 3, 20, 12, 21, 13, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>

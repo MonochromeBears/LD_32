@@ -36,7 +36,7 @@ func createHero():
 	add_child(hero)
 	
 func getEnemyHealth():
-	return exp(scores / 50000.0 + 1) / 4
+	return exp(scores / 100000.0 + 1) / 4
 	
 func getEnemySpeed():
 	return scores / 100000.0 + 0.5
