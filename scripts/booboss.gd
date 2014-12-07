@@ -22,7 +22,6 @@ func damage(damage):
 	setHealth(health - damage)
 
 func _ready():
-	print("test")
 	set_fixed_process(true)
 	
 func setHero(h):
@@ -43,7 +42,10 @@ func _fixed_process(delta):
 	set_rot(angle)
 
 	var motion = speed * moveVect
-	
+
+	if hero.isDead():
+		motion *= -1
+
 	if dist > 60:
 		move(motion)
 	

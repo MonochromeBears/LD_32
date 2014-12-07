@@ -37,13 +37,20 @@ func _fixed_process(delta):
 	var moveVect = (heroPoint - point).normalized()
 	var angle = point.angle_to_point(heroPoint)
 	
+	if hero.isDead():
+		angle += 3.14
+
 	if currentCooldown < cooldown:
 		currentCooldown += delta
 	set_rot(angle)
 
 	var motion = speed * moveVect
 	
-	if dist > 20:
+	if hero.isDead():
+		set_collide_with_kinematic_bodies(false)
+		motion *= -1
+	
+	if dist > 50:
 		move(motion)
 	
 		if (is_colliding()):
