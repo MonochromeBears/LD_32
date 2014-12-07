@@ -11,6 +11,7 @@ var scores = 0
 var death_sound
 
 func _ready():
+	get_node("Timer").start()
 	hero = Hero.instance()
 	hero.set_pos(Vector2(viewbox[0]/2, viewbox[1]/2))
 	health_bar = get_node("health")
@@ -30,18 +31,20 @@ func killEnemy(enemy):
 	scores += enemy.getScores()
 	print("SCORE: " + str(scores))
 	score_label.set_text("SCORE: " + str(scores))
-	self.remove_and_delete_child(enemy)
+	#self.remove_and_delete_child(enemy)
+	enemy.queue_free()
 	death_sound.play()
 	
+	
+	
+func update_health():
+	health_bar.set_value(hero.health)
+	
 
-func _on_Timer_timeout():
+func _on_Timer_timeout_():
 	var pos = Vector2(viewbox[0] * randf(), viewbox[1] * randf())
 	var enemy = Enemy.instance()
 	enemy.set_pos(pos)
 	enemy.setHero(hero)
 	add_child(enemy)
 	print("Creating enemy in (", pos.x, ", ", pos.y,")")
-	
-func update_health():
-	health_bar.set_value(hero.health)
-	

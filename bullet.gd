@@ -37,7 +37,8 @@ func _fixed_process(delta):
 	pass
 	
 func destroy():
-	self.get_parent().remove_and_delete_child(self)
+	self.queue_free()
+	#self.get_parent().remove_and_delete_child(self)
 	
 
 
