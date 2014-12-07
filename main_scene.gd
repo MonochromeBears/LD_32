@@ -36,10 +36,10 @@ func createHero():
 	add_child(hero)
 	
 func getEnemyHealth():
-	return 5 + 2 * log(scores / 100 + 1)
+	return exp(scores / 50000.0 + 1) / 4
 	
 func getEnemySpeed():
-	return log(scores / 9 + 2000) - 6.6
+	return scores / 100000.0 + 0.5
 	
 func createEnemy():
 	var pos = Vector2(viewbox[0] * randf(), viewbox[1] * randf())
@@ -57,7 +57,7 @@ func createBoss():
 	var enemy = Boss.instance()
 
 	enemy.setHealth(5 * getEnemyHealth())
-	enemy.setSpeed(getEnemySpeed() / 1.5)
+	enemy.setSpeed(getEnemySpeed() * 1.2)
 	enemy.setHero(hero)
 	enemy.set_pos(pos)
 	add_child(enemy)
@@ -67,7 +67,7 @@ func addScores(s):
 	scores += s
 	score_label.set_text("SCORE: " + str(scores))
 	
-	if scores > 5000 * (bossCounter + 1):
+	if scores > 10000 * (bossCounter + 1):
 		bossCounter += 1
 		createBoss()
 
