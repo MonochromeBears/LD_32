@@ -7,11 +7,8 @@ extends KinematicBody2D
 var disabled=false
 var direct = Vector2(0, 0)
 var speed = 7
-
-var damage = 1
-
-var cooldown = 2
-var currentCooldown
+var health = 100
+var damage = 3
 
 var enemy = preload("res://scripts/enemy.gd")
 var boss = preload("res://scripts/booboss.gd")
@@ -32,7 +29,6 @@ func set_direct(d):
 	
 func isEnemy(obj):
 	return (obj extends enemy) or (obj extends boss)
-
 
 func _fixed_process(delta):
 	move(speed * direct)

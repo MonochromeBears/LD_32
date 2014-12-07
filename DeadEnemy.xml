@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="5" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
-	<ext_resource path="res://shoota.xml" type="PackedScene"></ext_resource>
-	<ext_resource path="res://hero_gurl.png" type="Texture"></ext_resource>
-	<ext_resource path="res://hero.gd" type="Script"></ext_resource>
-	<ext_resource path="res://rocket/shootaR.xml" type="PackedScene"></ext_resource>
+<resource_file type="PackedScene" subresource_count="2" version="1.0" version_name="Godot Engine v1.0.rc1.8ad12525a9">
+	<ext_resource path="res://blood_body.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="34">
-				<string> "hero_body" </string>
-				<string> "KinematicBody2D" </string>
+			<string_array  len="22">
+				<string> "DeadEnemy" </string>
+				<string> "Sprite" </string>
 				<string> "_import_path" </string>
 				<string> "visibility/visible" </string>
 				<string> "visibility/opacity" </string>
@@ -18,16 +15,6 @@
 				<string> "transform/pos" </string>
 				<string> "transform/rot" </string>
 				<string> "transform/scale" </string>
-				<string> "shape_count" </string>
-				<string> "layers" </string>
-				<string> "collide_with/static" </string>
-				<string> "collide_with/kinematic" </string>
-				<string> "collide_with/rigid" </string>
-				<string> "collide_with/character" </string>
-				<string> "collision/margin" </string>
-				<string> "script/script" </string>
-				<string> "__meta__" </string>
-				<string> "Sprite" </string>
 				<string> "texture" </string>
 				<string> "centered" </string>
 				<string> "offset" </string>
@@ -39,60 +26,49 @@
 				<string> "modulate" </string>
 				<string> "region" </string>
 				<string> "region_rect" </string>
-				<string> "start_pos" </string>
-				<string> "Node2D" </string>
-				<string> "start_pos 2" </string>
+				<string> "__meta__" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 4 </int>
+			<int> 1 </int>
 			<string> "variants" </string>
-			<array  len="20" shared="false">
+			<array  len="14" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
-				<bool> False </bool>
-				<vector2> 0.110277, 0.155448 </vector2>
+				<vector2> -3.8147e-005, 0.323486 </vector2>
 				<real> 0 </real>
-				<vector2> 0.462365, 0.462366 </vector2>
-				<int> 0 </int>
+				<vector2> 0.5, 0.5 </vector2>
+				<resource  resource_type="Texture" path="res://blood_body.png">  </resource>
+				<vector2> 0, 0 </vector2>
+				<bool> False </bool>
 				<int> 1 </int>
-				<real> 0.08 </real>
-				<resource  resource_type="Script" path="res://hero.gd">  </resource>
+				<int> 0 </int>
+				<color> 1, 1, 1, 1 </color>
+				<rect2> 0, 0, 0, 0 </rect2>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
-						<string> "Script" </string>
-						<dictionary  shared="false">
-							<string> "current" </string>
-							<int> 4 </int>
-							<string> "sources" </string>
-							<array  len="5" shared="false">
-								<string> "res://scripts/hero.gd" </string>
-								<string> "res://hero.gd" </string>
-								<string> "res://scripts/enemy.gd" </string>
-								<string> "res://1111.gd" </string>
-								<string> "res://main_scene.gd" </string>
-							</array>
-						</dictionary>
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 3.424784 </real>
+							<real> 3.090869 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -126.636, -48.8762 </vector2>
+							<vector2> -160.967, -38.3492 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
+							<string> "deflight_rot_y" </string>
+							<real> 0.628319 </real>
 							<string> "zfar" </string>
 							<real> 500 </real>
 							<string> "fov" </string>
@@ -106,9 +82,11 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "use_orthogonal" </string>
-									<bool> False </bool>
+									<string> "listener" </string>
+									<bool> True </bool>
 									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -120,9 +98,11 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "use_orthogonal" </string>
+									<string> "listener" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -134,9 +114,11 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "use_orthogonal" </string>
+									<string> "listener" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -148,9 +130,11 @@
 									<real> 0 </real>
 									<string> "y_rot" </string>
 									<real> 0 </real>
-									<string> "use_orthogonal" </string>
+									<string> "listener" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
 									<vector3> 0, 0, 0 </vector3>
@@ -160,12 +144,18 @@
 							<int> 1 </int>
 							<string> "default_light" </string>
 							<bool> True </bool>
+							<string> "ambient_light_color" </string>
+							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
 							<string> "show_origin" </string>
 							<bool> True </bool>
 							<string> "znear" </string>
 							<real> 0.1 </real>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -176,19 +166,11 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
-				<vector2> 11.527, -6.1716 </vector2>
-				<vector2> 2.0604, 2.0604 </vector2>
-				<resource  resource_type="Texture" path="res://hero_gurl.png">  </resource>
-				<vector2> 0, 0 </vector2>
-				<color> 1, 1, 1, 1 </color>
-				<rect2> 0, 0, 0, 0 </rect2>
-				<resource  resource_type="PackedScene" path="res://shoota.xml">  </resource>
-				<resource  resource_type="PackedScene" path="res://rocket/shootaR.xml">  </resource>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="100"> 				-1, -1, 1, 0, -1, 17, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 1, 13, 1, 14, 1, 15, 1, 16, 9, 17, 10, 18, 11, 0, 0, 0, 19, 19, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 12, 8, 5, 9, 13, 20, 14, 21, 1, 22, 15, 23, 3, 24, 3, 25, 8, 26, 8, 27, 7, 28, 16, 29, 3, 30, 17, 0, 0, 0, 32, 31, 18, 0, 0, 0, 0, 32, 33, 19, 0, 0 </int_array>
+			<int_array  len="47"> 				-1, -1, 1, 0, -1, 20, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 3, 8, 4, 9, 5, 10, 6, 11, 1, 12, 7, 13, 8, 14, 8, 15, 9, 16, 9, 17, 10, 18, 11, 19, 8, 20, 12, 21, 13, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>

@@ -4,10 +4,10 @@ var hero
 var speed = 1
 
 var health = 100
-var cooldown = 1
-var currentCooldown = 1
+var cooldown = 3
+var currentCooldown = cooldown
 var scores = 500
-var damage = 1
+var damage = 5
 
 func setHealth(hp):
 	health = hp
@@ -22,6 +22,7 @@ func damage(damage):
 	setHealth(health - damage)
 
 func _ready():
+	print("test")
 	set_fixed_process(true)
 	
 func setHero(h):
@@ -43,7 +44,7 @@ func _fixed_process(delta):
 
 	var motion = speed * moveVect
 	
-	if dist > 20:
+	if dist > 60:
 		move(motion)
 	
 		if (is_colliding()):
