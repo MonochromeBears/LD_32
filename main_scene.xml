@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<<<<<<< HEAD
 <resource_file type="PackedScene" subresource_count="9" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
 	<ext_resource path="res://music/bam-motherfucker.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://music/game.ogg" type="AudioStream"></ext_resource>
@@ -8,34 +7,16 @@
 	<ext_resource path="res://progress-feel.png" type="Texture"></ext_resource>
 	<ext_resource path="res://progress-bg.png" type="Texture"></ext_resource>
 	<ext_resource path="res://main_scene.gd" type="Script"></ext_resource>
-=======
-<resource_file type="PackedScene" subresource_count="10" version="1.0" version_name="Godot Engine v1.0.rc1.8ad12525a9">
-	<ext_resource path="res://progress-bg.png" type="Texture"></ext_resource>
-	<ext_resource path="res://progress-feel.png" type="Texture"></ext_resource>
-	<ext_resource path="res://tilemap.xml" type="PackedScene"></ext_resource>
-	<ext_resource path="res://music/game.ogg" type="AudioStream"></ext_resource>
-	<ext_resource path="res://music/bam-motherfucker.ogg" type="AudioStream"></ext_resource>
-	<ext_resource path="res://fear.fnt" type="Font"></ext_resource>
->>>>>>> 441a20b9432050e901904d57ff3eb1b51013c28b
 	<ext_resource path="res://fear-16.fnt" type="Font"></ext_resource>
-	<ext_resource path="res://main_scene.gd" type="Script"></ext_resource>
-	<ext_resource path="res://music/nazzi_death.ogg" type="AudioStream"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-<<<<<<< HEAD
 			<string_array  len="61">
-=======
-			<string_array  len="78">
->>>>>>> 441a20b9432050e901904d57ff3eb1b51013c28b
 				<string> "root" </string>
 				<string> "Node" </string>
 				<string> "_import_path" </string>
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
-				<string> "TileMap" </string>
-				<string> "visibility/behind_parent" </string>
-				<string> "tile_data" </string>
 				<string> "Timer" </string>
 				<string> "wait_time" </string>
 				<string> "one_shot" </string>
@@ -53,6 +34,7 @@
 				<string> "visibility/visible" </string>
 				<string> "visibility/opacity" </string>
 				<string> "visibility/self_opacity" </string>
+				<string> "visibility/behind_parent" </string>
 				<string> "margin/left" </string>
 				<string> "margin/top" </string>
 				<string> "margin/right" </string>
@@ -89,22 +71,6 @@
 				<string> "texture/over" </string>
 				<string> "texture/progress" </string>
 				<string> "health label" </string>
-<<<<<<< HEAD
-=======
-				<string> "tomenu" </string>
-				<string> "Button" </string>
-				<string> "disabled" </string>
-				<string> "toggle_mode" </string>
-				<string> "click_on_press" </string>
-				<string> "icon" </string>
-				<string> "flat" </string>
-				<string> "clip_text" </string>
-				<string> "deadBodies" </string>
-				<string> "Node2D" </string>
-				<string> "transform/pos" </string>
-				<string> "transform/rot" </string>
-				<string> "transform/scale" </string>
->>>>>>> 441a20b9432050e901904d57ff3eb1b51013c28b
 				<string> "_on_Timer_timeout_" </string>
 				<string> "timeout" </string>
 			</string_array>
@@ -113,15 +79,9 @@
 			<string> "conn_count" </string>
 			<int> 1 </int>
 			<string> "node_count" </string>
-<<<<<<< HEAD
 			<int> 8 </int>
 			<string> "variants" </string>
 			<array  len="34" shared="false">
-=======
-			<int> 11 </int>
-			<string> "variants" </string>
-			<array  len="45" shared="false">
->>>>>>> 441a20b9432050e901904d57ff3eb1b51013c28b
 				<node_path> "" </node_path>
 				<resource  resource_type="Script" path="res://main_scene.gd">  </resource>
 				<dictionary  shared="false">
@@ -130,7 +90,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 2 </int>
 							<string> "sources" </string>
 							<array  len="6" shared="false">
 								<string> "res://main_scene.gd" </string>
@@ -146,19 +106,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-<<<<<<< HEAD
 							<real> 0.291989 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
 							<vector2> -1280, -678.697 </vector2>
-=======
-							<real> 0.487675 </real>
-							<string> "use_snap" </string>
-							<bool> False </bool>
-							<string> "ofs" </string>
-							<vector2> -164.793, -127.716 </vector2>
->>>>>>> 441a20b9432050e901904d57ff3eb1b51013c28b
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -247,136 +199,14 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
-				<resource  resource_type="PackedScene" path="res://tilemap.xml">  </resource>
-				<bool> True </bool>
-				<int_array  len="120"> 					0, 10, 1, 13, 2, 4, 3, 4, 4, 4, 5, 12, 6, 15, 7, 13, 8, 12, 9, 11, 65536, 12, 65537, 3, 65538, 1, 65539, 14, 65540, 1, 65541, 9, 65542, 4, 65543, 8, 65544, 5, 65545, 15, 131072, 5, 131073, 11, 131074, 2, 131075, 2, 131076, 2, 131077, 2, 131078, 6, 131079, 1, 131080, 9, 131081, 12, 196608, 10, 196609, 15, 196610, 0, 196611, 0, 196612, 0, 196613, 0, 196614, 3, 196615, 7, 196616, 6, 196617, 9, 262144, 4, 262145, 4, 262146, 4, 262147, 4, 262148, 4, 262149, 4, 262150, 8, 262151, 5, 262152, 11, 262153, 6, 327680, 7, 327681, 2, 327682, 2, 327683, 6, 327684, 7, 327685, 2, 327686, 6, 327687, 9, 327688, 4, 327689, 8 </int_array>
-				<dictionary  shared="false">
-					<string> "__editor_plugin_states__" </string>
-					<dictionary  shared="false">
-						<string> "2D" </string>
-						<dictionary  shared="false">
-							<string> "pixel_snap" </string>
-							<bool> False </bool>
-							<string> "zoom" </string>
-							<real> 0.214639 </real>
-							<string> "use_snap" </string>
-							<bool> False </bool>
-							<string> "ofs" </string>
-							<vector2> -735.78, -839.848 </vector2>
-							<string> "snap" </string>
-							<int> 10 </int>
-						</dictionary>
-						<string> "3D" </string>
-						<dictionary  shared="false">
-							<string> "deflight_rot_y" </string>
-							<real> 0.628319 </real>
-							<string> "zfar" </string>
-							<real> 500 </real>
-							<string> "fov" </string>
-							<real> 45 </real>
-							<string> "viewports" </string>
-							<array  len="4" shared="false">
-								<dictionary  shared="false">
-									<string> "distance" </string>
-									<real> 4 </real>
-									<string> "x_rot" </string>
-									<real> 0 </real>
-									<string> "y_rot" </string>
-									<real> 0 </real>
-									<string> "listener" </string>
-									<bool> True </bool>
-									<string> "use_environment" </string>
-									<bool> False </bool>
-									<string> "use_orthogonal" </string>
-									<bool> False </bool>
-									<string> "pos" </string>
-									<vector3> 0, 0, 0 </vector3>
-								</dictionary>
-								<dictionary  shared="false">
-									<string> "distance" </string>
-									<real> 4 </real>
-									<string> "x_rot" </string>
-									<real> 0 </real>
-									<string> "y_rot" </string>
-									<real> 0 </real>
-									<string> "listener" </string>
-									<bool> False </bool>
-									<string> "use_environment" </string>
-									<bool> False </bool>
-									<string> "use_orthogonal" </string>
-									<bool> False </bool>
-									<string> "pos" </string>
-									<vector3> 0, 0, 0 </vector3>
-								</dictionary>
-								<dictionary  shared="false">
-									<string> "distance" </string>
-									<real> 4 </real>
-									<string> "x_rot" </string>
-									<real> 0 </real>
-									<string> "y_rot" </string>
-									<real> 0 </real>
-									<string> "listener" </string>
-									<bool> False </bool>
-									<string> "use_environment" </string>
-									<bool> False </bool>
-									<string> "use_orthogonal" </string>
-									<bool> False </bool>
-									<string> "pos" </string>
-									<vector3> 0, 0, 0 </vector3>
-								</dictionary>
-								<dictionary  shared="false">
-									<string> "distance" </string>
-									<real> 4 </real>
-									<string> "x_rot" </string>
-									<real> 0 </real>
-									<string> "y_rot" </string>
-									<real> 0 </real>
-									<string> "listener" </string>
-									<bool> False </bool>
-									<string> "use_environment" </string>
-									<bool> False </bool>
-									<string> "use_orthogonal" </string>
-									<bool> False </bool>
-									<string> "pos" </string>
-									<vector3> 0, 0, 0 </vector3>
-								</dictionary>
-							</array>
-							<string> "default_light" </string>
-							<bool> True </bool>
-							<string> "viewport_mode" </string>
-							<int> 1 </int>
-							<string> "ambient_light_color" </string>
-							<color> 0.15, 0.15, 0.15, 1 </color>
-							<string> "show_grid" </string>
-							<bool> True </bool>
-							<string> "znear" </string>
-							<real> 0.1 </real>
-							<string> "show_origin" </string>
-							<bool> True </bool>
-							<string> "deflight_rot_x" </string>
-							<real> 0.942478 </real>
-							<string> "default_srgb" </string>
-							<bool> False </bool>
-						</dictionary>
-					</dictionary>
-					<string> "__editor_run_settings__" </string>
-					<dictionary  shared="false">
-						<string> "custom_args" </string>
-						<string> "-l $scene" </string>
-						<string> "run_mode" </string>
-						<int> 0 </int>
-					</dictionary>
-					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
-				</dictionary>
-				<real> 0.3 </real>
+				<real> 1 </real>
 				<bool> False </bool>
+				<bool> True </bool>
 				<resource  resource_type="AudioStream" path="res://music/game.ogg">  </resource>
 				<real> 0 </real>
 				<resource  resource_type="AudioStream" path="res://music/bam-motherfucker.ogg">  </resource>
-				<real> 1 </real>
 				<real> 345 </real>
 				<real> 19 </real>
 				<real> 492 </real>
@@ -401,27 +231,11 @@
 				<real> 133 </real>
 				<real> 52 </real>
 				<resource  resource_type="Font" path="res://fear-16.fnt">  </resource>
-<<<<<<< HEAD
 			</array>
 			<string> "nodes" </string>
 			<int_array  len="296"> 				-1, -1, 1, 0, -1, 3, 2, 0, 3, 1, 4, 2, 0, 0, 0, 5, 5, -1, 4, 2, 0, 6, 3, 7, 4, 8, 5, 0, 0, 0, 9, 9, -1, 7, 2, 0, 10, 6, 11, 4, 12, 5, 13, 7, 14, 5, 15, 4, 0, 0, 0, 9, 16, -1, 7, 2, 0, 10, 8, 11, 4, 12, 4, 13, 7, 14, 5, 15, 4, 0, 0, 0, 18, 17, -1, 32, 2, 0, 19, 5, 20, 3, 21, 3, 22, 4, 23, 9, 24, 10, 25, 11, 26, 12, 27, 0, 28, 0, 29, 0, 30, 0, 31, 5, 32, 5, 33, 13, 34, 3, 35, 14, 36, 15, 37, 7, 38, 3, 39, 3, 40, 3, 41, 7, 42, 4, 43, 4, 44, 16, 45, 17, 46, 17, 47, 4, 48, 4, 49, 18, 0, 0, 0, 9, 50, -1, 7, 2, 0, 10, 19, 11, 4, 12, 4, 13, 7, 14, 4, 15, 4, 0, 0, 0, 52, 51, -1, 29, 2, 0, 19, 5, 20, 3, 21, 3, 22, 4, 23, 20, 24, 21, 25, 22, 26, 23, 53, 24, 27, 0, 28, 0, 29, 0, 30, 0, 31, 4, 32, 5, 33, 13, 54, 13, 34, 3, 37, 7, 38, 25, 39, 3, 40, 7, 41, 25, 42, 4, 43, 4, 55, 26, 56, 27, 57, 28, 0, 0, 0, 18, 58, -1, 31, 2, 0, 19, 5, 20, 3, 21, 3, 22, 4, 23, 29, 24, 30, 25, 31, 26, 32, 27, 0, 28, 0, 29, 0, 30, 0, 31, 5, 32, 5, 33, 13, 34, 3, 35, 33, 37, 7, 38, 3, 39, 3, 40, 3, 41, 7, 42, 4, 43, 4, 44, 24, 45, 17, 46, 17, 47, 4, 48, 4, 49, 18, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="6"> 				1, 0, 60, 59, 2, 0 </int_array>
-=======
-				<real> -97 </real>
-				<real> -37 </real>
-				<real> -15 </real>
-				<real> -17 </real>
-				<string> "Go to menu" </string>
-				<int> 1 </int>
-				<vector2> 0, 0 </vector2>
-				<vector2> 1, 1 </vector2>
-			</array>
-			<string> "nodes" </string>
-			<int_array  len="393"> 				-1, -1, 1, 0, -1, 3, 2, 0, 3, 1, 4, 2, 0, 0, 0, 5, 5, 3, 4, 2, 0, 6, 4, 7, 5, 4, 6, 0, 0, 0, 8, 8, -1, 4, 2, 0, 9, 7, 10, 8, 11, 4, 0, 0, 0, 12, 12, -1, 7, 2, 0, 13, 9, 14, 8, 15, 4, 16, 10, 17, 4, 18, 8, 0, 0, 0, 12, 19, -1, 7, 2, 0, 13, 11, 14, 8, 15, 8, 16, 10, 17, 4, 18, 8, 0, 0, 0, 21, 20, -1, 32, 2, 0, 22, 4, 23, 7, 24, 7, 6, 8, 25, 12, 26, 13, 27, 14, 28, 15, 29, 0, 30, 0, 31, 0, 32, 0, 33, 4, 34, 4, 35, 16, 36, 7, 37, 17, 38, 18, 39, 10, 40, 7, 41, 7, 42, 7, 43, 10, 44, 8, 45, 8, 46, 19, 47, 20, 48, 20, 49, 8, 50, 8, 51, 21, 0, 0, 0, 12, 52, -1, 7, 2, 0, 13, 22, 14, 8, 15, 8, 16, 10, 17, 8, 18, 8, 0, 0, 0, 54, 53, -1, 29, 2, 0, 22, 4, 23, 7, 24, 7, 6, 8, 25, 23, 26, 24, 27, 25, 28, 26, 55, 27, 29, 0, 30, 0, 31, 0, 32, 0, 33, 8, 34, 4, 35, 16, 56, 16, 36, 7, 39, 10, 40, 28, 41, 7, 42, 10, 43, 28, 44, 8, 45, 8, 57, 29, 58, 30, 59, 31, 0, 0, 0, 21, 60, -1, 31, 2, 0, 22, 4, 23, 7, 24, 7, 6, 8, 25, 32, 26, 33, 27, 34, 28, 35, 29, 0, 30, 0, 31, 0, 32, 0, 33, 4, 34, 4, 35, 16, 36, 7, 37, 36, 39, 10, 40, 7, 41, 7, 42, 7, 43, 10, 44, 8, 45, 8, 46, 27, 47, 20, 48, 20, 49, 8, 50, 8, 51, 21, 0, 0, 0, 62, 61, -1, 26, 2, 0, 22, 4, 23, 7, 24, 7, 6, 8, 25, 37, 26, 38, 27, 39, 28, 40, 29, 0, 30, 0, 31, 0, 32, 0, 33, 8, 34, 4, 35, 16, 56, 16, 36, 7, 63, 8, 64, 8, 65, 8, 46, 41, 66, 30, 67, 8, 68, 8, 47, 42, 0, 0, 0, 70, 69, -1, 8, 2, 0, 22, 4, 23, 7, 24, 7, 6, 8, 71, 43, 72, 10, 73, 44, 0 </int_array>
-			<string> "conns" </string>
-			<int_array  len="12"> 				2, 0, 75, 74, 2, 0, 9, 0, 77, 76, 2, 0 </int_array>
->>>>>>> 441a20b9432050e901904d57ff3eb1b51013c28b
 		</dictionary>
 
 	</main_resource>
