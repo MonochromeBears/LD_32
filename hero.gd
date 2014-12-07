@@ -35,10 +35,10 @@ func rotate():
 	set_rot(getAngle())
 	
 func getCurrentPoint():
-	var pos1 = get_node("Position2D").get_pos()
+
 	var pos2 = get_pos()
 
-	return pos1 + pos2
+	return pos2
 
 func getLastStep():
 	return lastStep
