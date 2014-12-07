@@ -4,10 +4,16 @@ extends Node2D
 var bullet = preload("res://rocket/rocket.xml")
 
 var spread = 20
+var power = 18
+
+var cooldown = 3
+var currentCooldown = cooldown
 
 func _input(ev):
 	
-	if ((ev.type == InputEvent.MOUSE_BUTTON) and (ev.button_index == 2)):
+	if ((ev.type == InputEvent.MOUSE_BUTTON) and (ev.button_index == 2) and ev.is_pressed() and (currentCooldown >= cooldown)):
+		currentCooldown = 0
+
 		for i in range(18):
 			var bi = bullet.instance()
 			var pos = ev.pos
@@ -22,6 +28,10 @@ func _input(ev):
 			get_parent().get_parent().add_child(bi)
 			bi.set_direct(vector)
 		
+func _process(delta):
+	if currentCooldown < cooldown:
+		currentCooldown += delta
+	
 func _ready():
 	
 	set_process_input(true)

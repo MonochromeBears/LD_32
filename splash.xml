@@ -2,8 +2,8 @@
 <resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
 	<ext_resource path="res://music/desert-eagle-fire.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://music/splash.ogg" type="AudioStream"></ext_resource>
-	<ext_resource path="res://splash.gd" type="Script"></ext_resource>
 	<ext_resource path="res://Knopka_01.png" type="Texture"></ext_resource>
+	<ext_resource path="res://splash.gd" type="Script"></ext_resource>
 	<ext_resource path="res://splash.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
@@ -97,13 +97,15 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 2 </int>
+							<int> 4 </int>
 							<string> "sources" </string>
-							<array  len="4" shared="false">
+							<array  len="6" shared="false">
 								<string> "res://splash.gd" </string>
 								<string> "res://global.gd" </string>
 								<string> "res://main_scene.gd" </string>
 								<string> "res://scripts/enemy.gd" </string>
+								<string> "res://rocket/1111.gd" </string>
+								<string> "res://rocket/bullet.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
