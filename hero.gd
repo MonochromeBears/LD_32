@@ -84,7 +84,7 @@ func _fixed_process(delta):
 	rotate()
 
 func destroy():
-	dead = false
+	dead = true
 	pass
 	
 func isEnemy(obj):
