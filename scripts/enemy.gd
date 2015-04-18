@@ -8,6 +8,8 @@ var cooldown = 1
 var currentCooldown = 1
 var scores = 500
 var damage = 1
+var damageRange = 50
+var visibleRange = 300
 
 func setHealth(hp):
 	health = hp
@@ -51,7 +53,7 @@ func _fixed_process(delta):
 		set_collide_with_kinematic_bodies(false)
 		motion *= -1
 	
-	if (dist > 50 && dist < 300):
+	if (dist > damageRange && dist < visibleRange):
 		set_rot(angle)
 		move(motion)
 	
@@ -59,7 +61,7 @@ func _fixed_process(delta):
         	var n = get_collision_normal()
         	motion = n.slide(motion) 
         	move(motion)
-	elif(dist < 50):
+	elif(dist < damageRange):
 		if currentCooldown >= cooldown:
 			hero.damage(damage)
 			currentCooldown -= cooldown
