@@ -9,7 +9,7 @@ var direct = Vector2(0, 0)
 var speed = 2
 
 var pulse = 0.1
-var maxScale = 10
+var maxScale = 3
 
 var damage = 1
 var cooldown = 2
@@ -39,7 +39,7 @@ func _fixed_process(delta):
 	if (get_scale().x > maxScale):
 		pulse = pulse * -1
 	if (get_scale().x < 0.2):
-		pulse = pulse * -1 
+		destroy()
 	set_scale(Vector2(get_scale().x + pulse, get_scale().y + pulse))
 
 func destroy():
