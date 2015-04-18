@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="5" version="1.1" version_name="Godot Engine v1.1.beta1.42d41a3fbc">
+<resource_file type="PackedScene" subresource_count="4" version="1.1" version_name="Godot Engine v1.1.beta1.42d41a3fbc">
 	<ext_resource path="res://sprites/BEEBER.png" type="Texture"></ext_resource>
 	<ext_resource path="res://bullet.gd" type="Script"></ext_resource>
-	<resource type="ConvexPolygonShape2D" path="local://1">
+	<resource type="CircleShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
-		<vector2_array name="points" len="3"> 			0, -10, 8.66025, 5, -8.66025, 5 </vector2_array>
-
-	</resource>
-	<resource type="GDScript" path="local://2">
-		<string name="script/source"> "" </string>
+		<real name="radius"> 10 </real>
 
 	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="93">
+			<string_array  len="43">
 				<string> "bullet" </string>
-				<string> "KinematicBody2D" </string>
+				<string> "Area2D" </string>
 				<string> "_import_path" </string>
 				<string> "visibility/visible" </string>
 				<string> "visibility/opacity" </string>
@@ -32,103 +28,55 @@
 				<string> "shapes/0/shape" </string>
 				<string> "shapes/0/transform" </string>
 				<string> "shapes/0/trigger" </string>
-				<string> "layers" </string>
-				<string> "collide_with/static" </string>
-				<string> "collide_with/kinematic" </string>
-				<string> "collide_with/rigid" </string>
-				<string> "collide_with/character" </string>
-				<string> "collision/margin" </string>
+				<string> "gravity_point" </string>
+				<string> "gravity_vec" </string>
+				<string> "gravity" </string>
+				<string> "linear_damp" </string>
+				<string> "angular_damp" </string>
+				<string> "monitoring" </string>
+				<string> "monitorable" </string>
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
-				<string> "Particles2D" </string>
-				<string> "config/amount" </string>
-				<string> "config/lifetime" </string>
-				<string> "config/time_scale" </string>
-				<string> "config/preprocess" </string>
-				<string> "config/emit_timeout" </string>
-				<string> "config/emitting" </string>
-				<string> "config/offset" </string>
-				<string> "config/half_extents" </string>
-				<string> "config/local_space" </string>
-				<string> "config/explosiveness" </string>
-				<string> "config/flip_h" </string>
-				<string> "config/flip_v" </string>
-				<string> "config/texture" </string>
-				<string> "config/h_frames" </string>
-				<string> "config/v_frames" </string>
-				<string> "params/direction" </string>
-				<string> "params/spread" </string>
-				<string> "params/linear_velocity" </string>
-				<string> "params/spin_velocity" </string>
-				<string> "params/orbit_velocity" </string>
-				<string> "params/gravity_direction" </string>
-				<string> "params/gravity_strength" </string>
-				<string> "params/radial_accel" </string>
-				<string> "params/tangential_accel" </string>
-				<string> "params/damping" </string>
-				<string> "params/initial_angle" </string>
-				<string> "params/initial_size" </string>
-				<string> "params/final_size" </string>
-				<string> "params/hue_variation" </string>
-				<string> "params/anim_speed_scale" </string>
-				<string> "params/anim_initial_pos" </string>
-				<string> "randomness/direction" </string>
-				<string> "randomness/spread" </string>
-				<string> "randomness/linear_velocity" </string>
-				<string> "randomness/spin_velocity" </string>
-				<string> "randomness/orbit_velocity" </string>
-				<string> "randomness/gravity_direction" </string>
-				<string> "randomness/gravity_strength" </string>
-				<string> "randomness/radial_accel" </string>
-				<string> "randomness/tangential_accel" </string>
-				<string> "randomness/damping" </string>
-				<string> "randomness/initial_angle" </string>
-				<string> "randomness/initial_size" </string>
-				<string> "randomness/final_size" </string>
-				<string> "randomness/hue_variation" </string>
-				<string> "randomness/anim_speed_scale" </string>
-				<string> "randomness/anim_initial_pos" </string>
-				<string> "color_phases/count" </string>
-				<string> "phase_0/pos" </string>
-				<string> "phase_0/color" </string>
-				<string> "phase_1/pos" </string>
-				<string> "phase_1/color" </string>
-				<string> "phase_2/pos" </string>
-				<string> "phase_2/color" </string>
-				<string> "phase_3/pos" </string>
-				<string> "phase_3/color" </string>
-				<string> "emission_points" </string>
-				<string> "Timer" </string>
-				<string> "wait_time" </string>
-				<string> "one_shot" </string>
-				<string> "autostart" </string>
-				<string> "CollisionShape2D 2" </string>
+				<string> "Sprite" </string>
+				<string> "texture" </string>
+				<string> "centered" </string>
+				<string> "offset" </string>
+				<string> "flip_h" </string>
+				<string> "flip_v" </string>
+				<string> "vframes" </string>
+				<string> "hframes" </string>
+				<string> "frame" </string>
+				<string> "modulate" </string>
+				<string> "region" </string>
+				<string> "region_rect" </string>
 				<string> "CollisionShape2D" </string>
 				<string> "shape" </string>
 				<string> "trigger" </string>
-				<string> "_on_Timer_timeout" </string>
-				<string> "timeout" </string>
+				<string> "_on_bullet_body_enter" </string>
+				<string> "body_enter" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 1 </int>
 			<string> "node_count" </string>
-			<int> 4 </int>
+			<int> 3 </int>
 			<string> "variants" </string>
-			<array  len="28" shared="false">
+			<array  len="22" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
 				<int> 1 </int>
-				<vector2> 0, 0 </vector2>
+				<vector2> 0.540373, -0.540358 </vector2>
 				<real> 0.49845 </real>
 				<vector2> 1, 1 </vector2>
 				<int> 0 </int>
 				<bool> False </bool>
 				<resource  resource_type="Shape2D" path="local://1">  </resource>
-				<matrix32> 5.07069, 0.0237936, -0.0227164, 4.84114, -0.335894, 2.15289 </matrix32>
-				<real> 0.08 </real>
+				<matrix32> 4, -0, 0, 4, 0, 0 </matrix32>
+				<vector2> 0, 1 </vector2>
+				<real> 98 </real>
+				<real> 0.1 </real>
 				<resource  resource_type="Script" path="res://bullet.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
@@ -138,10 +86,9 @@
 							<string> "current" </string>
 							<int> 0 </int>
 							<string> "sources" </string>
-							<array  len="3" shared="false">
+							<array  len="2" shared="false">
 								<string> "res://bullet.gd" </string>
 								<string> "res://1111.gd" </string>
-								<node_path> "/root/EditorNode/@Panel3/@VBoxContainer6/@HSplitContainer8/@VSplitContainer9/@VSplitContainer10/@VBoxContainer11/@Panel16/@Control18/@CanvasItemEditor5886/@VSplitContainer5811/@HSplitContainer5812/@Control5813/@Control5814/@Viewport5815/bullet/Timer" </node_path>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -270,27 +217,19 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
-				<vector2> 0.214645, 0 </vector2>
+				<vector2> 0, 0 </vector2>
 				<real> 0 </real>
-				<real> 0.5 </real>
 				<resource  resource_type="Texture" path="res://sprites/BEEBER.png">  </resource>
-				<int> 3 </int>
 				<color> 1, 1, 1, 1 </color>
-				<real> 0.2 </real>
-				<color> 0, 0, 0, 0.573815 </color>
-				<color> 0, 0, 0, 0 </color>
-				<vector2_array  len="0"> 					 </vector2_array>
-				<resource  resource_type="Script" path="local://2">  </resource>
-				<vector2> -0.335894, 2.15289 </vector2>
-				<real> -0.268851 </real>
-				<vector2> 5.07075, 4.84119 </vector2>
+				<rect2> 0, 0, 0, 0 </rect2>
+				<vector2> 4, 4 </vector2>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="242"> 				-1, -1, 1, 0, -1, 23, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 8, 13, 3, 14, 9, 15, 10, 16, 8, 17, 3, 18, 1, 19, 1, 20, 1, 21, 1, 22, 11, 23, 12, 24, 13, 0, 0, 0, 25, 25, -1, 67, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 14, 8, 15, 9, 6, 10, 7, 11, 1, 26, 3, 27, 16, 28, 2, 29, 2, 30, 15, 31, 1, 32, 4, 33, 4, 34, 1, 35, 2, 36, 8, 37, 8, 38, 17, 39, 3, 40, 3, 41, 15, 42, 15, 43, 15, 44, 15, 45, 15, 46, 15, 47, 15, 48, 15, 49, 15, 50, 15, 51, 15, 52, 16, 53, 2, 54, 15, 55, 15, 56, 15, 57, 15, 58, 15, 59, 15, 60, 15, 61, 15, 62, 15, 63, 15, 64, 15, 65, 15, 66, 15, 67, 15, 68, 15, 69, 15, 70, 15, 71, 15, 72, 15, 73, 18, 74, 15, 75, 19, 76, 20, 77, 19, 78, 2, 79, 21, 80, 2, 81, 22, 82, 23, 0, 0, 0, 83, 83, -1, 5, 2, 0, 84, 2, 85, 1, 86, 8, 23, 24, 0, 0, 0, 88, 87, -1, 12, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 25, 8, 26, 9, 27, 10, 7, 11, 1, 89, 9, 90, 8, 0 </int_array>
+			<int_array  len="135"> 				-1, -1, 1, 0, -1, 24, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 8, 13, 3, 14, 9, 15, 10, 16, 1, 17, 8, 18, 11, 19, 12, 20, 13, 21, 2, 22, 1, 23, 1, 24, 14, 25, 15, 0, 0, 0, 26, 26, -1, 21, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 16, 8, 17, 9, 6, 10, 7, 11, 1, 27, 18, 28, 1, 29, 16, 30, 8, 31, 8, 32, 3, 33, 3, 34, 7, 35, 19, 36, 8, 37, 20, 0, 0, 0, 38, 38, -1, 12, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 16, 8, 17, 9, 21, 10, 7, 11, 1, 39, 9, 40, 1, 0 </int_array>
 			<string> "conns" </string>
-			<int_array  len="6"> 				2, 0, 92, 91, 2, 0 </int_array>
+			<int_array  len="6"> 				0, 0, 42, 41, 2, 0 </int_array>
 		</dictionary>
 
 	</main_resource>
