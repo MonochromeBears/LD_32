@@ -6,7 +6,7 @@ extends KinematicBody2D
 
 var disabled=false
 var direct = Vector2(0, 0)
-var speed = 7
+var speed = 2
 
 var damage = 1
 
@@ -29,7 +29,7 @@ func _ready():
 	
 func set_direct(d):
 	direct = d
-	
+
 func isEnemy(obj):
 	return (obj extends enemy) or (obj extends boss)
 
@@ -52,3 +52,4 @@ func destroy():
 
 func _on_Timer_timeout():
 	destroy()
+
