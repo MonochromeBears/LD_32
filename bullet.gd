@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 
 # member variables here, example:
 # var a=2
@@ -8,8 +8,10 @@ var disabled=false
 var direct = Vector2(0, 0)
 var speed = 2
 
-var damage = 1
+var pulse = 0.1
+var maxScale = 10
 
+var damage = 1
 var cooldown = 2
 var currentCooldown
 
@@ -23,7 +25,6 @@ func disable():
 
 func _ready():
 	# Initalization here
-	get_node("Timer").start()
 	set_fixed_process(true)
 	pass
 	
@@ -35,21 +36,19 @@ func isEnemy(obj):
 
 
 func _fixed_process(delta):
-	move(speed * direct)
-	
-	if is_colliding():
-		var damaged = get_collider()
-		if isEnemy(damaged):
-			damaged.damage(damage)
-			destroy()
-	pass
-	
+	if (get_scale().x > maxScale):
+		pulse = pulse * -1
+	if (get_scale().x < 0.2):
+		pulse = pulse * -1 
+	set_scale(Vector2(get_scale().x + pulse, get_scale().y + pulse))
+
 func destroy():
 	self.queue_free()
 	#self.get_parent().remove_and_delete_child(self)
 	
 
 
-func _on_Timer_timeout():
-	destroy()
-
+func _on_bullet_body_enter( body ):
+	if isEnemy(body):
+		body.damage(damage)
+		#destroy()
