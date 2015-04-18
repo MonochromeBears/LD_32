@@ -22,12 +22,14 @@ func damage(damage):
 	setHealth(health - damage)
 
 func _ready():
+	      
 	set_fixed_process(true)
 	
 func setHero(h):
 	hero = h
 	
 func _fixed_process(delta):
+	
 	var point = get_pos()
 	var lastStep = hero.getLastStep();
 	var heroPoint = hero.get_pos()
@@ -42,7 +44,6 @@ func _fixed_process(delta):
 
 	if currentCooldown < cooldown:
 		currentCooldown += delta
-	set_rot(angle)
 
 	var motion = speed * moveVect
 	
@@ -50,14 +51,15 @@ func _fixed_process(delta):
 		set_collide_with_kinematic_bodies(false)
 		motion *= -1
 	
-	if dist > 50:
+	if (dist > 50 && dist < 300):
+		set_rot(angle)
 		move(motion)
 	
 		if (is_colliding()):
         	var n = get_collision_normal()
         	motion = n.slide(motion) 
         	move(motion)
-	else:
+	elif(dist < 50):
 		if currentCooldown >= cooldown:
 			hero.damage(damage)
 			currentCooldown -= cooldown
