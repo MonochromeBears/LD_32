@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="6" version="1.1" version_name="Godot Engine v1.1.beta1.42d41a3fbc">
-	<ext_resource path="res://rocket/shootaR.xml" type="PackedScene"></ext_resource>
+<resource_file type="PackedScene" subresource_count="6" version="1.1" version_name="Godot Engine v1.1.beta1.custom_build">
 	<ext_resource path="res://explosion.xml" type="PackedScene"></ext_resource>
-	<ext_resource path="res://sprites/HORROR.tex" type="Texture"></ext_resource>
-	<ext_resource path="res://shoota.xml" type="PackedScene"></ext_resource>
 	<ext_resource path="res://hero.gd" type="Script"></ext_resource>
+	<ext_resource path="res://shoota.xml" type="PackedScene"></ext_resource>
+	<ext_resource path="res://rocket/shootaR.xml" type="PackedScene"></ext_resource>
+	<ext_resource path="res://sprites/HORROR.tex" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="52">
+			<string_array  len="67">
 				<string> "hero_body" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "_import_path" </string>
@@ -59,6 +59,21 @@
 				<string> "wait_time" </string>
 				<string> "one_shot" </string>
 				<string> "autostart" </string>
+				<string> "Camera2D" </string>
+				<string> "rotating" </string>
+				<string> "current" </string>
+				<string> "smoothing" </string>
+				<string> "zoom" </string>
+				<string> "limit/left" </string>
+				<string> "limit/top" </string>
+				<string> "limit/right" </string>
+				<string> "limit/bottom" </string>
+				<string> "drag_margin/h_enabled" </string>
+				<string> "drag_margin/v_enabled" </string>
+				<string> "drag_margin/left" </string>
+				<string> "drag_margin/top" </string>
+				<string> "drag_margin/right" </string>
+				<string> "drag_margin/bottom" </string>
 				<string> "_on_Timer_timeout" </string>
 				<string> "timeout" </string>
 			</string_array>
@@ -67,9 +82,9 @@
 			<string> "conn_count" </string>
 			<int> 1 </int>
 			<string> "node_count" </string>
-			<int> 6 </int>
+			<int> 7 </int>
 			<string> "variants" </string>
-			<array  len="27" shared="false">
+			<array  len="29" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -259,10 +274,10 @@
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
-							<string> "fov" </string>
-							<real> 45 </real>
 							<string> "zfar" </string>
 							<real> 500 </real>
+							<string> "fov" </string>
+							<real> 45 </real>
 							<string> "viewports" </string>
 							<array  len="4" shared="false">
 								<dictionary  shared="false">
@@ -328,10 +343,10 @@
 							<bool> True </bool>
 							<string> "show_grid" </string>
 							<bool> True </bool>
-							<string> "znear" </string>
-							<real> 0.1 </real>
 							<string> "show_origin" </string>
 							<bool> True </bool>
+							<string> "znear" </string>
+							<real> 0.1 </real>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -374,10 +389,10 @@
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
-							<string> "fov" </string>
-							<real> 45 </real>
 							<string> "zfar" </string>
 							<real> 500 </real>
+							<string> "fov" </string>
+							<real> 45 </real>
 							<string> "viewports" </string>
 							<array  len="4" shared="false">
 								<dictionary  shared="false">
@@ -443,10 +458,10 @@
 							<bool> True </bool>
 							<string> "show_grid" </string>
 							<bool> True </bool>
-							<string> "znear" </string>
-							<real> 0.1 </real>
 							<string> "show_origin" </string>
 							<bool> True </bool>
+							<string> "znear" </string>
+							<real> 0.1 </real>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -482,6 +497,10 @@
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
+							<string> "fov" </string>
+							<real> 45 </real>
+							<string> "zfar" </string>
+							<real> 500 </real>
 							<string> "viewports" </string>
 							<array  len="4" shared="false">
 								<dictionary  shared="false">
@@ -549,28 +568,24 @@
 									<vector3> 0, 0, 0 </vector3>
 								</dictionary>
 							</array>
-							<string> "zfar" </string>
-							<real> 500 </real>
 							<string> "deflight_rot_y" </string>
 							<real> 0.628319 </real>
-							<string> "fov" </string>
-							<real> 45 </real>
-							<string> "default_light" </string>
-							<bool> True </bool>
 							<string> "viewport_mode" </string>
 							<int> 1 </int>
+							<string> "default_light" </string>
+							<bool> True </bool>
 							<string> "ambient_light_color" </string>
 							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
-							<string> "znear" </string>
-							<real> 0.1 </real>
 							<string> "show_origin" </string>
 							<bool> True </bool>
-							<string> "deflight_rot_x" </string>
-							<real> 0.942478 </real>
+							<string> "znear" </string>
+							<real> 0.1 </real>
 							<string> "default_srgb" </string>
 							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -583,11 +598,13 @@
 					<string> "__editor_plugin_screen__" </string>
 					<string> "2D" </string>
 				</dictionary>
+				<int> -10000000 </int>
+				<int> 10000000 </int>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="162"> 				-1, -1, 1, 0, -1, 20, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 1, 12, 8, 13, 7, 14, 3, 15, 1, 16, 1, 17, 1, 18, 1, 19, 9, 20, 10, 21, 11, 0, 0, 0, 22, 22, -1, 21, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 12, 8, 5, 9, 6, 10, 7, 11, 1, 23, 13, 24, 1, 25, 14, 26, 8, 27, 8, 28, 3, 29, 3, 30, 7, 31, 15, 32, 1, 33, 16, 0, 0, 0, 35, 34, 17, 3, 2, 0, 3, 8, 21, 18, 0, 0, 0, 35, 36, 19, 3, 2, 0, 3, 8, 21, 20, 0, 0, 0, 38, 37, 21, 9, 2, 0, 39, 22, 40, 8, 41, 5, 42, 23, 43, 5, 44, 24, 45, 25, 21, 26, 0, 0, 0, 46, 46, -1, 4, 2, 0, 47, 22, 48, 1, 49, 8, 0 </int_array>
+			<int_array  len="219"> 				-1, -1, 1, 0, -1, 20, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 1, 12, 8, 13, 7, 14, 3, 15, 1, 16, 1, 17, 1, 18, 1, 19, 9, 20, 10, 21, 11, 0, 0, 0, 22, 22, -1, 21, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 12, 8, 5, 9, 6, 10, 7, 11, 1, 23, 13, 24, 1, 25, 14, 26, 8, 27, 8, 28, 3, 29, 3, 30, 7, 31, 15, 32, 1, 33, 16, 0, 0, 0, 35, 34, 17, 3, 2, 0, 3, 8, 21, 18, 0, 0, 0, 35, 36, 19, 3, 2, 0, 3, 8, 21, 20, 0, 0, 0, 38, 37, 21, 9, 2, 0, 39, 22, 40, 8, 41, 5, 42, 23, 43, 5, 44, 24, 45, 25, 21, 26, 0, 0, 0, 46, 46, -1, 4, 2, 0, 47, 22, 48, 1, 49, 8, 0, 0, 0, 50, 50, -1, 25, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 14, 8, 5, 9, 6, 10, 7, 11, 1, 24, 1, 51, 8, 52, 1, 53, 5, 54, 6, 55, 27, 56, 27, 57, 28, 58, 28, 59, 1, 60, 1, 61, 24, 62, 24, 63, 24, 64, 24, 0 </int_array>
 			<string> "conns" </string>
-			<int_array  len="6"> 				5, 0, 51, 50, 2, 0 </int_array>
+			<int_array  len="6"> 				5, 0, 66, 65, 2, 0 </int_array>
 		</dictionary>
 
 	</main_resource>
