@@ -50,5 +50,6 @@ func destroy():
 
 func _on_bullet_body_enter( body ):
 	if isEnemy(body):
-		body.damage(damage)
+		if(randf()<0.2):
+			body.damage(damage*999)
 		#destroy()

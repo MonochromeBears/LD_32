@@ -17,9 +17,9 @@ func _input(ev):
 		
 		
 		
-		bi.set_pos(get_parent().get_pos() + (spread + 5) * vector + Vector2(spread * randf() - spread / 2.0, spread * randf() - spread / 2.0))
-		
-		get_parent().get_parent().add_child(bi)
+		#bi.set_pos(get_parent().get_pos())
+		get_parent().add_child(bi)
+		#get_parent().get_parent().add_child(bi)
 
 		
 		bi.set_direct(vector)
